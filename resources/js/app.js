@@ -8,10 +8,18 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
-// require('./theme/typed');
-// require('./theme/isotope.pkgd');
-// require('./theme/imagesloaded.pkgd');
-// require('./theme/scripts');
+
+/**
+ * Codersrank stuff
+ */
+import CodersrankWorkExperience from '@codersrank/work-experience';
+window.customElements.define('codersrank-work-experience', CodersrankWorkExperience);
+import CodersrankEducation from '@codersrank/education';
+window.customElements.define('codersrank-education', CodersrankEducation);
+import CodersrankSummary from '@codersrank/summary';
+window.customElements.define('codersrank-summary', CodersrankSummary);
+import CodersRankSkillsChart from '@codersrank/skills-chart';
+window.customElements.define('codersrank-skills-chart', CodersRankSkillsChart);
 
 /**
  * The following block of code may be used to automatically register your
