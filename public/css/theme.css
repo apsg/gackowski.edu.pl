@@ -1381,6 +1381,7 @@ textarea.error::-webkit-input-placeholder {
   opacity: 0;
   visibility: hidden;
   z-index: 9;
+  display: none;
 }
 .card-inner:before,
 .card-inner:after {

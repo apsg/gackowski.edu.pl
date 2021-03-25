@@ -12,38 +12,26 @@
             <!-- content -->
             <div class="row">
 
-                <div class="col col-d-12 col-t-12 col-m-12 border-line-h">
-                    <codersrank-summary username="apsg"></codersrank-summary>
+                <div class="col col-12 border-line-h">
+                    <div>
+                        <codersrank-summary username="apsg"></codersrank-summary>
+                    </div>
                 </div>
 
                 <!-- education -->
-                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                <div class="col col-12 border-line-v">
                     <div class="resume-title border-line-h">
                         <div class="icon"><i class="fa fa-university"></i></div>
                         <div class="name">Education</div>
                     </div>
+
                     <div class="resume-items">
                         <codersrank-education username="apsg"></codersrank-education>
                     </div>
                 </div>
-
-                <!-- experience -->
-                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                    <div class="resume-title border-line-h">
-                        <div class="icon"><i class="fa fa-briefcase"></i></div>
-                        <div class="name">Experience</div>
-                    </div>
-                    <div class="resume-items">
-                        <codersrank-work-experience username="apsg"></codersrank-work-experience>
-                    </div>
-                </div>
-
-
                 <div class="clear"></div>
             </div>
-
         </div>
-
         <!--
             Skills
         -->
@@ -54,9 +42,8 @@
 
             <!-- content -->
             <div class="row">
-
                 <!-- skill item -->
-                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                <div class="col col-lg-6 col-md-12 col-sm-12 border-line-v">
                     <div class="skills-list">
                         <div class="skill-title border-line-h">
                             <div class="icon"><i class="fa fa-paint-brush"></i></div>
@@ -92,7 +79,7 @@
                 </div>
 
                 <!-- skill item -->
-                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                <div class="col col-lg-6 col-md-12 col-sm-12 border-line-v">
                     <div class="skills-list dotted">
                         <div class="skill-title border-line-h">
                             <div class="icon"><i class="fa fa-flag"></i></div>
@@ -122,7 +109,7 @@
                 </div>
 
                 <!-- skill item -->
-                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                <div class="col col-lg-6 col-md-12 col-sm-12 border-line-v">
                     <div class="skills-list circles">
                         <div class="skill-title border-line-h">
                             <div class="icon"><i class="fa fa-code"></i></div>
@@ -158,7 +145,7 @@
                 </div>
 
                 <!-- skill item -->
-                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                <div class="col col-lg-6 col-md-12 col-sm-12 border-line-v">
                     <div class="skills-list list">
                         <div class="skill-title border-line-h">
                             <div class="icon"><i class="fa fa-list"></i></div>
@@ -166,34 +153,31 @@
                         </div>
                         <ul>
                             <li>
-                                <div class="name">Website hosting</div>
+                                <div class="name">Webdevelop</div>
                             </li>
                             <li>
-                                <div class="name">iOS and android apps</div>
+                                <div class="name">Website hosting and managing</div>
                             </li>
                             <li>
-                                <div class="name">Create logo design</div>
+                                <div class="name">Clean code / SOLID design principles</div>
                             </li>
                             <li>
-                                <div class="name">Design for print</div>
+                                <div class="name">Code craftsmanship</div>
                             </li>
                             <li>
                                 <div class="name">Modern and mobile-ready</div>
                             </li>
                             <li>
-                                <div class="name">Advertising services include</div>
+                                <div class="name">Graphics and photography</div>
                             </li>
                             <li>
-                                <div class="name">Graphics and animations</div>
-                            </li>
-                            <li>
-                                <div class="name">Search engine marketing</div>
+                                <div class="name">Science (data science, signal processing, automatics)</div>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                <div class="col col-12 border-line-v">
                     <codersrank-skills-chart username="apsg"></codersrank-skills-chart>
                 </div>
 
@@ -202,77 +186,48 @@
 
         </div>
 
-        <!--
-            Testimonials
-        -->
-        <div class="content testimonials">
-
-            <!-- title -->
-            <div class="title">Testimonials</div>
-
-            <!-- content -->
-            <div class="row testimonials-items">
-
-                <!-- client item -->
-                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                    <div class="revs-carousel default-revs">
-                        <div class="owl-carousel">
-                            <div class="item">
-                                <div class="revs-item">
-                                    <div class="text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                                        dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                    <div class="user">
-                                        <div class="img"><img src="images/man1.jpg" alt=""/></div>
-                                        <div class="info">
-                                            <div class="name">Helen Floyd</div>
-                                            <div class="company">Art Director</div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="revs-item">
-                                    <div class="text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                                        dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                    <div class="user">
-                                        <div class="img"><img src="images/man1.jpg" alt=""/></div>
-                                        <div class="info">
-                                            <div class="name">Robert Chase</div>
-                                            <div class="company">CEO</div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="revs-item">
-                                    <div class="text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                                        dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                    <div class="user">
-                                        <div class="img"><img src="images/man1.jpg" alt=""/></div>
-                                        <div class="info">
-                                            <div class="name">Helen Floyd</div>
-                                            <div class="company">Art Director</div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="content resume">
+            <!-- experience -->
+            <div class="col col-12 border-line-v">
+                <div class="resume-title border-line-h">
+                    <div class="icon"><i class="fa fa-briefcase"></i></div>
+                    <div class="name">Experience</div>
                 </div>
-
-                <div class="clear"></div>
+                <div class="resume-items">
+                    <codersrank-work-experience username="apsg"></codersrank-work-experience>
+                </div>
             </div>
 
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!--
+        Testimonials
+    -->
+    <div class="content testimonials">
+
+        <!-- title -->
+        <div class="title">Find more about me</div>
+
+        <!-- content -->
+        <div class="row testimonials-items">
+
+            <!-- client item -->
+            <div class="col col-12 border-line-v">
+                <div class="d-flex">
+                    <div>
+                        <a href="">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
         </div>
 
     </div>
+
 </div>
