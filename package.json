@@ -14,6 +14,8 @@
         "bootstrap": "^4.0.0",
         "jquery": "^3.2",
         "laravel-mix": "^6.0.6",
+        "less": "^4.1.1",
+        "less-loader": "^8.0.0",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "postcss": "^8.1.14",
@@ -23,5 +25,8 @@
         "vue": "^2.5.17",
         "vue-loader": "^15.9.6",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@codersrank/work-experience": "^0.9.8"
     }
 }
