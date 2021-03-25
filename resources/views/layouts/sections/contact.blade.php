@@ -1,4 +1,4 @@
-<div class="card-inner contacts" id="contacts-card">
+<div class="card-inner contacts" id="contact-card">
     <div class="card-wrap">
 
         <!--

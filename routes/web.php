@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/{section}', function ($section) {
+    return view('welcome')->with(compact('section'));
+});
+
+Route::get('/blog/{slug}', [BlogController::class, 'show']);

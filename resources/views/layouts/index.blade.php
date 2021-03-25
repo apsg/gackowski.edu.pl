@@ -17,13 +17,13 @@
     <!--
         Load CSS
     -->
-    {{--    <link rel="stylesheet" href="css/theme/basic.css"/>--}}
-    {{--    <link rel="stylesheet" href="css/theme/layout.css"/>--}}
+    {{--    <link rel="stylesheet" href="/css/theme/basic.css"/>--}}
+    {{--    <link rel="stylesheet" href="/css/theme/layout.css"/>--}}
     {{--    <link rel="stylesheet" href="css/theme/blogs.css"/>--}}
-    <link rel="stylesheet" href="css/theme/ionicons.css"/>
-    <link rel="stylesheet" href="css/theme/magnific-popup.css"/>
-    <link rel="stylesheet" href="css/theme/animate.css"/>
-    <link rel="stylesheet" href="css/theme/owl.carousel.css"/>
+    <link rel="stylesheet" href="/css/theme/ionicons.css"/>
+    <link rel="stylesheet" href="/css/theme/magnific-popup.css"/>
+    <link rel="stylesheet" href="/css/theme/animate.css"/>
+    <link rel="stylesheet" href="/css/theme/owl.carousel.css"/>
 
     <link rel="stylesheet" href="{{ @asset('css/theme.css') }}">
     <link rel="stylesheet" href="{{ @asset('css/app.css') }}">
@@ -31,32 +31,32 @@
 <!--
 		Background Gradient
 	-->
-    <link rel="stylesheet" href="css/theme/gradient.css"/>
+    <link rel="stylesheet" href="/css/theme/gradient.css"/>
 
     <!--
         Template New-Skin
     -->
-    <link rel="stylesheet" href="css/theme/new-skin/new-skin.css"/>
+    <link rel="stylesheet" href="/css/theme/new-skin/new-skin.css"/>
 
     <!--
         Template RTL
     -->
-    <!--<link rel="stylesheet" href="css/theme/rtl.css" />-->
+    <!--<link rel="stylesheet" href="/css/theme/rtl.css" />-->
 
     <!--
         Template Colors
     -->
-    <link rel="stylesheet" href="css/theme/demos/demo-1-colors.css"/>
-    <!--<link rel="stylesheet" href="css/theme/template-colors/blue.css" />-->
-    <!--<link rel="stylesheet" href="css/theme/template-colors/orange.css" />-->
-    <!--<link rel="stylesheet" href="css/theme/template-colors/pink.css" />-->
-    <!--<link rel="stylesheet" href="css/theme/template-colors/purple.css" />-->
-    <!--<link rel="stylesheet" href="css/theme/template-colors/red.css" />-->
+    <link rel="stylesheet" href="/css/theme/demos/demo-1-colors.css"/>
+    <!--<link rel="stylesheet" href="/css/theme/template-colors/blue.css" />-->
+    <!--<link rel="stylesheet" href="/css/theme/template-colors/orange.css" />-->
+    <!--<link rel="stylesheet" href="/css/theme/template-colors/pink.css" />-->
+    <!--<link rel="stylesheet" href="/css/theme/template-colors/purple.css" />-->
+    <!--<link rel="stylesheet" href="/css/theme/template-colors/red.css" />-->
 
     <!--
         Template Dark
     -->
-    <!--<link rel="stylesheet" href="css/theme/template-dark/dark.css" />-->
+    <!--<link rel="stylesheet" href="/css/theme/template-dark/dark.css" />-->
 
 
     <!--[if lt IE 9]>
@@ -157,7 +157,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#contacts-card">
+                        <a href="#contact-card">
                             <span class="icon ion-at"></span>
                             <span class="link">Contact</span>
                         </a>
@@ -178,7 +178,7 @@
             <div class="profile no-photo">
 
                 <!-- profile image -->
-                <div class="slide" style="background-image: url(images/profile.jpg);"></div>
+                <div class="slide" style="background-image: url('/images/profile.jpg');"></div>
 
                 <!-- profile titles -->
                 <div class="title">Szymon Gackowski</div>
@@ -218,7 +218,7 @@
                         <span class="text">Download CV</span>
                         <span class="ion ion-archive"></span>
                     </a>
-                    <a href="#" class="lnk discover">
+                    <a href="{{ url('/contact') }}" class="lnk discover">
                         <span class="text">Contact Me</span>
                         <span class="arrow"></span>
                     </a>
@@ -228,129 +228,8 @@
 
         </div>
 
-        <!--
-            Card - About
-        -->
-        @include('layouts/sections/about')
+        @yield('content')
 
-        <!--
-            Card - Resume
-        -->
-        @include('layouts/sections/resume')
-
-        <!--
-            Card - Works
-        -->
-        @include('layouts/sections/works')
-
-        <!--
-            Card - Blog
-        -->
-        @include('layouts/sections/blog')
-
-        <!--
-            Card - Contacts
-        -->
-        @include('layouts/sections/contact')
-
-    </div>
-
-    <div class="s_overlay"></div>
-    <div class="content-sidebar">
-        <div class="sidebar-wrap search-form">
-            <aside id="secondary" class="widget-area">
-                <section id="search-2" class="widget widget_search">
-                    <label>
-                        <span class="screen-reader-text">Search for:</span>
-                        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
-                    </label>
-                    <input type="submit" class="search-submit" value="Search">
-                </section>
-                <section class="widget widget_recent_entries">
-                    <h2 class="widget-title">
-                        <span class="widget-title-span"><span class="first-word">Recent</span> Posts</span>
-                    </h2>
-                    <ul>
-                        <li>
-                            <a href="#">Creativity Is More Than</a>
-                        </li>
-                        <li>
-                            <a href="#">Designing the perfect</a>
-                        </li>
-                        <li>
-                            <a href="#">Music Player Design</a>
-                        </li>
-                        <li>
-                            <a href="#">A Song And Dance Act</a>
-                        </li>
-                        <li>
-                            <a href="#">By spite about do of allow</a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="widget widget_recent_comments">
-                    <h2 class="widget-title">
-                        <span class="widget-title-span"><span class="first-word">Recent</span> Comments</span>
-                    </h2>
-                    <ul>
-                        <li class="recentcomments">
-                            <span class="comment-author-link">JOHN SMITH</span> on <a href="#">Creativity Is More
-                                Than</a>
-                        </li>
-                        <li class="recentcomments">
-                            <span class="comment-author-link">ADAM SMITH</span> on <a href="#">Creativity Is More
-                                Than</a>
-                        </li>
-                        <li class="recentcomments">
-                            <span class="comment-author-link">admin</span> on <a href="#">Designing the perfect</a>
-                        </li>
-                        <li class="recentcomments">
-                            <span class="comment-author-link">admin</span> on <a href=#">Designing the perfect</a>
-                        </li>
-                        <li class="recentcomments">
-                            <span class="comment-author-link">James</span> on <a href="#">Designing the perfect</a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="widget widget_archive">
-                    <h2 class="widget-title">
-							<span class="widget-title-span">
-								<span class="first-letter">Archives</span>
-							</span>
-                    </h2>
-                    <ul>
-                        <li>
-                            <a href="#">November 2018</a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="widget widget_categories">
-                    <h2 class="widget-title">
-                        <span class="widget-title-span"><span class="first-letter">Categories</span></span>
-                    </h2>
-                    <ul>
-                        <li class="cat-item cat-item-2">
-                            <a href="#">Design</a>
-                        </li>
-                        <li class="cat-item cat-item-3">
-                            <a href="#">Music</a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="widget widget_meta">
-                    <h2 class="widget-title">
-                        <span class="widget-title-span"><span class="first-letter">Meta</span></span>
-                    </h2>
-                    <ul>
-                        <li><a href="#">Log in</a></li>
-                        <li><a href="#">Entries feed</a></li>
-                        <li><a href="#">Comments feed</a></li>
-                        <li><a href="#">WordPress.org</a></li>
-                    </ul>
-                </section>
-            </aside>
-        </div>
-        <span class="close"></span>
     </div>
 
 </div>
@@ -361,13 +240,13 @@
 
 <script src="{{ @asset('js/app.js') }}"></script>
 {{--	<script src="js/jquery.min.js"></script>--}}
-<script src="js/theme/jquery.validate.js"></script>
-<script src="js/theme/jquery.magnific-popup.js"></script>
-<script src="js/theme/imagesloaded.pkgd.js"></script>
-<script src="js/theme/isotope.pkgd.js"></script>
-<script src="js/theme/jquery.slimscroll.js"></script>
-<script src="js/theme/owl.carousel.js"></script>
-<script src="js/theme/typed.js"></script>
+<script src="/js/theme/jquery.validate.js"></script>
+<script src="/js/theme/jquery.magnific-popup.js"></script>
+<script src="/js/theme/imagesloaded.pkgd.js"></script>
+<script src="/js/theme/isotope.pkgd.js"></script>
+<script src="/js/theme/jquery.slimscroll.js"></script>
+<script src="/js/theme/owl.carousel.js"></script>
+<script src="/js/theme/typed.js"></script>
 <script src="https://use.fontawesome.com/8da76d029b.js"></script>
 
 <!--
@@ -378,7 +257,9 @@
 <!--
     Main Scripts
 -->
-<script src="js/theme/scripts.js"></script>
+<script src="/js/theme/scripts.js"></script>
+
+@stack('scripts')
 
 </body>
 </html>
