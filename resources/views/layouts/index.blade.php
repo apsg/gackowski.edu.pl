@@ -14,12 +14,6 @@
         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!--
-        Load CSS
-    -->
-    {{--    <link rel="stylesheet" href="/css/theme/basic.css"/>--}}
-    {{--    <link rel="stylesheet" href="/css/theme/layout.css"/>--}}
-    {{--    <link rel="stylesheet" href="css/theme/blogs.css"/>--}}
     <link rel="stylesheet" href="/css/theme/ionicons.css"/>
     <link rel="stylesheet" href="/css/theme/magnific-popup.css"/>
     <link rel="stylesheet" href="/css/theme/animate.css"/>
@@ -239,7 +233,6 @@
 -->
 
 <script src="{{ @asset('/js/app.js') }}"></script>
-{{--	<script src="js/jquery.min.js"></script>--}}
 <script src="/js/theme/jquery.validate.js"></script>
 <script src="/js/theme/jquery.magnific-popup.js"></script>
 <script src="/js/theme/imagesloaded.pkgd.js"></script>
@@ -247,7 +240,7 @@
 <script src="/js/theme/jquery.slimscroll.js"></script>
 <script src="/js/theme/owl.carousel.js"></script>
 <script src="/js/theme/typed.js"></script>
-<script src="https://use.fontawesome.com/8da76d029b.js"></script>
+{{--<script src="https://use.fontawesome.com/8da76d029b.js"></script>--}}
 
 <!--
     Main Scripts

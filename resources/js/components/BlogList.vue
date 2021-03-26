@@ -8,6 +8,9 @@
 
         <!-- content -->
         <div class="row">
+            <div>
+                <i class="fas fa-spinner"></i>
+            </div>
             <!-- blog item -->
             <div v-for="post in posts" :key="post.id" class="col col-lg-6 col-md-12">
                 <div class="box-item">
@@ -33,9 +36,13 @@
         <div class="pager">
             <nav class="navigation pagination">
                 <div class="nav-links">
-                    <span class="page-numbers current">1</span>
-                    <a class="page-numbers" href="#">2</a>
-                    <a class="next page-numbers" href="#">Next</a>
+                    <a class="page-numbers" href="#" v-if="page > 1" @click.prevent="prev()">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                    <span class="page-numbers current">{{ page }}</span>
+                    <a class="page-numbers" href="#" @click.prevent="next()">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
                 </div>
             </nav>
         </div>
@@ -49,12 +56,13 @@ export default {
 
     data() {
         return {
-            posts: []
+            posts: [],
+            page: 1
         }
     },
 
     mounted() {
-        this.getPage(1);
+        this.getPage(this.page);
     },
 
     methods: {
@@ -63,6 +71,19 @@ export default {
                 .then(r => {
                     this.posts = r.data.data;
                 });
+        },
+
+        next() {
+            this.posts = [];
+            this.page++;
+            this.getPage(this.page);
+        },
+
+        prev() {
+            this.posts = [];
+            this.page--;
+            this.page = Math.max(1, this.page);
+            this.getPage(this.page);
         }
     }
 }

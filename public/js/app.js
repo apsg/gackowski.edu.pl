@@ -5035,15 +5035,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "BlogList",
   data: function data() {
     return {
-      posts: []
+      posts: [],
+      page: 1
     };
   },
   mounted: function mounted() {
-    this.getPage(1);
+    this.getPage(this.page);
   },
   methods: {
     getPage: function getPage(page) {
@@ -5052,6 +5060,17 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/a/blog?page=' + page).then(function (r) {
         _this.posts = r.data.data;
       });
+    },
+    next: function next() {
+      this.posts = [];
+      this.page++;
+      this.getPage(this.page);
+    },
+    prev: function prev() {
+      this.posts = [];
+      this.page--;
+      this.page = Math.max(1, this.page);
+      this.getPage(this.page);
     }
   }
 });
@@ -40627,6 +40646,8 @@ var render = function() {
       "div",
       { staticClass: "row" },
       [
+        _vm._m(1),
+        _vm._v(" "),
         _vm._l(_vm.posts, function(post) {
           return _c(
             "div",
@@ -40681,7 +40702,47 @@ var render = function() {
       2
     ),
     _vm._v(" "),
-    _vm._m(1)
+    _c("div", { staticClass: "pager" }, [
+      _c("nav", { staticClass: "navigation pagination" }, [
+        _c("div", { staticClass: "nav-links" }, [
+          _vm.page > 1
+            ? _c(
+                "a",
+                {
+                  staticClass: "page-numbers",
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.prev()
+                    }
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-chevron-left" })]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _c("span", { staticClass: "page-numbers current" }, [
+            _vm._v(_vm._s(_vm.page))
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "page-numbers",
+              attrs: { href: "#" },
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  return _vm.next()
+                }
+              }
+            },
+            [_c("i", { staticClass: "fa fa-chevron-right" })]
+          )
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -40695,21 +40756,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pager" }, [
-      _c("nav", { staticClass: "navigation pagination" }, [
-        _c("div", { staticClass: "nav-links" }, [
-          _c("span", { staticClass: "page-numbers current" }, [_vm._v("1")]),
-          _vm._v(" "),
-          _c("a", { staticClass: "page-numbers", attrs: { href: "#" } }, [
-            _vm._v("2")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "next page-numbers", attrs: { href: "#" } }, [
-            _vm._v("Next")
-          ])
-        ])
-      ])
-    ])
+    return _c("div", [_c("i", { staticClass: "fas fa-spinner" })])
   }
 ]
 render._withStripped = true

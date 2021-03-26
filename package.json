@@ -30,6 +30,7 @@
         "@codersrank/education": "^0.9.12",
         "@codersrank/skills-chart": "^0.9.20",
         "@codersrank/summary": "^0.9.11",
-        "@codersrank/work-experience": "^0.9.8"
+        "@codersrank/work-experience": "^0.9.8",
+        "@fortawesome/fontawesome-free": "^5.15.3"
     }
 }
