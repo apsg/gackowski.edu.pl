@@ -12,13 +12,10 @@
             <!-- content -->
             <div class="row">
                 <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                    <div class="map" id="map"></div>
                     <div class="info-list">
                         <ul>
-                            <li><strong>Address . . . . .</strong> California, USA</li>
-                            <li><strong>Email . . . . .</strong> adlard@example.com</li>
-                            <li><strong>Phone . . . . .</strong> +123 654 78900</li>
-                            <li><strong>Freelance . . . . .</strong> Available</li>
+                            <li><strong><i class="fa fa-envelope"></i> </strong> szymon@gackowski.edu.pl</li>
+                            <li><strong><i class="fa fa-phone"></i></strong> +48 664 825 439</li>
                         </ul>
                     </div>
                 </div>
@@ -41,12 +38,12 @@
                     <div class="contact_form">
                         <form id="cform" method="post">
                             <div class="row">
-                                <div class="col col-d-6 col-t-6 col-m-12">
+                                <div class="col col-sm-6 col-md-6 col-md-12">
                                     <div class="group-val">
                                         <input type="text" name="name" placeholder="Full Name"/>
                                     </div>
                                 </div>
-                                <div class="col col-d-6 col-t-6 col-m-12">
+                                <div class="col col-sm-6 col-md-6 col-md-12">
                                     <div class="group-val">
                                         <input type="text" name="email" placeholder="Email Address"/>
                                     </div>

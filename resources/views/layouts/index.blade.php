@@ -67,7 +67,7 @@
     <!--
         Favicons
     -->
-    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
 
 </head>
 
@@ -202,7 +202,7 @@
                         <span class="fa fa-stack-overflow"></span>
                     </a>
                     <a target="_blank" href="https://profile.codersrank.io/user/apsg">
-                        <span class="fa fa-codersrank"></span>
+                        <img src="/images/codersrank.png" />
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/in/szymon-gackowski-3a65a51a5/">
                         <span class="fa fa-linkedin"></span>
@@ -238,7 +238,7 @@
     jQuery Scripts
 -->
 
-<script src="{{ @asset('js/app.js') }}"></script>
+<script src="{{ @asset('/js/app.js') }}"></script>
 {{--	<script src="js/jquery.min.js"></script>--}}
 <script src="/js/theme/jquery.validate.js"></script>
 <script src="/js/theme/jquery.magnific-popup.js"></script>
@@ -248,11 +248,6 @@
 <script src="/js/theme/owl.carousel.js"></script>
 <script src="/js/theme/typed.js"></script>
 <script src="https://use.fontawesome.com/8da76d029b.js"></script>
-
-<!--
-    Google map api
--->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz2w7HUaWudHwd7AWQpCL48Qs050WOn9s"></script>
 
 <!--
     Main Scripts
