@@ -7,14 +7,11 @@
         </div>
 
         <!-- content -->
-        <div class="row">
-            <div>
-                <i class="fas fa-spinner"></i>
-            </div>
+        <div class="row" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="500">
             <!-- blog item -->
             <div v-for="post in posts" :key="post.id" class="col col-lg-6 col-md-12">
                 <div class="box-item">
-                    <div class="image">
+                    <div class="image" v-if="post.thumb">
                         <a :href="'/blog/' + post.slug">
                             <img :src="post.thumb" :alt="post.title"/>
                         </a>
@@ -36,13 +33,7 @@
         <div class="pager">
             <nav class="navigation pagination">
                 <div class="nav-links">
-                    <a class="page-numbers" href="#" v-if="page > 1" @click.prevent="prev()">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
-                    <span class="page-numbers current">{{ page }}</span>
-                    <a class="page-numbers" href="#" @click.prevent="next()">
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
+                    Loading...
                 </div>
             </nav>
         </div>
@@ -57,7 +48,8 @@ export default {
     data() {
         return {
             posts: [],
-            page: 1
+            page: 1,
+            busy: true
         }
     },
 
@@ -69,7 +61,8 @@ export default {
         getPage(page) {
             axios.get('/a/blog?page=' + page)
                 .then(r => {
-                    this.posts = r.data.data;
+                    this.posts.push(...r.data.data);
+                    this.busy = false;
                 });
         },
 
@@ -83,6 +76,12 @@ export default {
             this.posts = [];
             this.page--;
             this.page = Math.max(1, this.page);
+            this.getPage(this.page);
+        },
+
+        loadMore() {
+            this.busy = true;
+            this.page++;
             this.getPage(this.page);
         }
     }

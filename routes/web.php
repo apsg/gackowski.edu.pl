@@ -25,3 +25,4 @@ Route::get('/{section}', function ($section) {
 Route::get('/blog/{slug}', [BlogController::class, 'show']);
 
 Route::get('/a/blog', [BlogController::class, 'index']);
+Route::get('/a/blog/{slug}', [BlogController::class, 'single']);

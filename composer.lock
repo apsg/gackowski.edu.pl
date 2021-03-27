@@ -12,18 +12,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/apsg/wordpressor.git",
-                "reference": "1dacc2951d8a9472ab4b3a1d9d052e4283fee0ba"
+                "reference": "3dc116b912e86b08670f2b0e2d8d2342f781da99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apsg/wordpressor/zipball/1dacc2951d8a9472ab4b3a1d9d052e4283fee0ba",
-                "reference": "1dacc2951d8a9472ab4b3a1d9d052e4283fee0ba",
+                "url": "https://api.github.com/repos/apsg/wordpressor/zipball/3dc116b912e86b08670f2b0e2d8d2342f781da99",
+                "reference": "3dc116b912e86b08670f2b0e2d8d2342f781da99",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.3",
                 "illuminate/contracts": "^8.0",
-                "php": "^7.4",
+                "php": "^7.4|^8.0",
                 "spatie/laravel-package-tools": "^1.4.3"
             },
             "require-dev": {
@@ -42,7 +42,7 @@
                         "Apsg\\Wordpressor\\WordpressorServiceProvider"
                     ],
                     "aliases": {
-                        "Wordpressor": "WordpressorFacade"
+                        "Wordpressor": "Apsg\\Wordpressor\\WordpressorFacade"
                     }
                 }
             },
@@ -75,11 +75,11 @@
             },
             "funding": [
                 {
-                    "url": "https://github.com/:vendor_name",
+                    "url": "https://github.com/apsg",
                     "type": "github"
                 }
             ],
-            "time": "2021-03-26T12:51:27+00:00"
+            "time": "2021-03-26T19:22:57+00:00"
         },
         {
             "name": "asm89/stack-cors",

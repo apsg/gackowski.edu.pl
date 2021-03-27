@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\PostResource;
 use Apsg\Wordpressor\Wordpressor;
+use Apsg\Wordpressor\WordpressorFacade;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -21,5 +22,15 @@ class BlogController extends Controller
     public function show(string $slug)
     {
         return view('blog')->with(compact('slug'));
+    }
+
+    public function single(string $slug)
+    {
+        $post = (new Wordpressor())
+            ->posts()
+            ->slug($slug)
+            ->getTransformed()[0];
+
+        return new PostResource($post);
     }
 }

@@ -15,6 +15,10 @@ window.customElements.define('codersrank-skills-chart', CodersRankSkillsChart);
 
 window.Vue = require('vue').default;
 Vue.component('blog-list', require('./components/BlogList.vue').default);
+Vue.component('blog-post', require('./components/BlogPost.vue').default);
+
+import infiniteScroll from 'vue-infinite-scroll';
+Vue.use(infiniteScroll);
 
 const app = new Vue({
     el: '#app',

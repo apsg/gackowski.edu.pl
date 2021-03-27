@@ -7,15 +7,23 @@ class PostResource extends JsonResource
 {
     public function toArray($request)
     {
-        return [
+        $data = [
             'id'      => $this->id(),
             'title'   => $this->title(),
             'excerpt' => $this->excerpt(),
             'content' => $this->content(),
-            'thumb'   => $this->image()->medium(),
-            'full'    => $this->image()->full(),
             'date'    => $this->date()->format('Y-m-d H:i'),
             'slug'    => $this->slug(),
         ];
+
+        if ($this->image() !== null) {
+            $data += [
+                'thumb'    => $this->image()->medium(),
+                'full'     => $this->image()->full(),
+                'featured' => $this->image()->getSize('featured-blog-large'),
+            ];
+        }
+
+        return $data;
     }
 }

@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="{{ @asset('css/theme.css') }}">
     <link rel="stylesheet" href="{{ @asset('css/app.css') }}">
 
-<!--
-		Background Gradient
-	-->
+    <!--
+            Background Gradient
+        -->
     <link rel="stylesheet" href="/css/theme/gradient.css"/>
 
     <!--
@@ -121,37 +121,41 @@
             </div>
 
             <!-- menu btn -->
-            <!--<a href="#" class="menu-btn"><span></span></a>-->
+            <div class="p-1 text-center d-none d-md-block bg-white rounded mb-2">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('images/logo_400.png') }}" width="60" height="60"/>
+                </a>
+            </div>
 
             <!-- menu -->
             <div class="top-menu">
                 <ul>
                     <li class="active">
-                        <a href="#about-card">
+                        <a @if(Request::is('/')) href="#about-card" @else href="{{ url('/') }}" @endif>
                             <span class="icon ion-person"></span>
                             <span class="link">About</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#resume-card">
+                        <a @if(Request::is('/')) href="#resume-card" @else href="{{ url('/resume') }}" @endif>
                             <span class="icon ion-android-list"></span>
                             <span class="link">Resume</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#works-card">
+                        <a @if(Request::is('/')) href="#works-card" @else href="{{ url('/works') }}" @endif>
                             <span class="icon ion-paintbrush"></span>
                             <span class="link">Works</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#blog-card">
+                        <a @if(Request::is('/')) href="#blog-card" @else href="{{ url('/blog') }}" @endif>
                             <span class="icon ion-chatbox-working"></span>
                             <span class="link">Blog</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact-card">
+                        <a @if(Request::is('/')) href="#contact-card" @else href="{{ url('/contact') }}" @endif>
                             <span class="icon ion-at"></span>
                             <span class="link">Contact</span>
                         </a>
@@ -190,19 +194,19 @@
                 <!-- profile socials -->
                 <div class="social">
                     <a target="_blank" href="https://github.com/user/apsg">
-                        <span class="fa fa-github"></span>
+                        <span class="fab fa-github"></span>
                     </a>
                     <a target="_blank" href="https://stackoverflow.com/users/177167/gacek">
-                        <span class="fa fa-stack-overflow"></span>
+                        <span class="fab fa-stack-overflow"></span>
                     </a>
                     <a target="_blank" href="https://profile.codersrank.io/user/apsg">
-                        <img src="/images/codersrank.png" />
+                        <img src="/images/codersrank.png"/>
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/in/szymon-gackowski-3a65a51a5/">
-                        <span class="fa fa-linkedin"></span>
+                        <span class="fab fa-linkedin"></span>
                     </a>
                     <a target="_blank" href="https://www.deviantart.com/gacek">
-                        <span class="fa fa-deviantart"></span>
+                        <span class="fab fa-deviantart"></span>
                     </a>
                 </div>
 
