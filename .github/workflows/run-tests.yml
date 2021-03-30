@@ -9,7 +9,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest]
-        php: [7.4, 8.0]
+        php: [8.0]
         laravel: [8.*]
         stability: [prefer-stable]
         include:
@@ -38,6 +38,9 @@ jobs:
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+
+      - name: Setup env
+        run: php artisan key:generate
 
       - name: Execute tests
         run: vendor/bin/phpunit
