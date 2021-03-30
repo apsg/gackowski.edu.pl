@@ -4990,6 +4990,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _BlogPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BlogPopup */ "./resources/js/components/BlogPopup.vue");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -5045,8 +5046,25 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "BlogList",
+  components: {
+    'blog-popup': _BlogPopup__WEBPACK_IMPORTED_MODULE_0__.default
+  },
   data: function data() {
     return {
       posts: [],
@@ -5084,6 +5102,45 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       this.busy = true;
       this.page++;
       this.getPage(this.page);
+    },
+    openPopup: function openPopup(slug) {
+      this.$refs.popup.open(slug);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogPopup.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogPopup.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "BlogPopup",
+  methods: {
+    open: function open(slug) {
+      var _this = this;
+
+      $('#blog-popup-open').click();
+      $('#blog-popup').html('Loading...');
+      axios.get('/a/blog/' + slug).then(function (r) {
+        $('#blog-popup').html(_this.format(r.data.data));
+      });
+    },
+    format: function format(data) {
+      return "\n<div class=\"content\">\n    <div class=\"image h-100\">\n        <img src=\"".concat(data.featured, "\" alt=\"\">\n    </div>\n    <div class=\"desc\">\n        <div class=\"post-box\">\n            <h1>").concat(data.title, "</h1>\n            <div class=\"blog-detail\">\n                <span class=\"date\">").concat(data.date, "</span>\n            </div>\n            <div class=\"blog-content px-3\">\n                ").concat(data.content, "\n            </div>\n        </div>\n    </div>\n</div>");
     }
   }
 });
@@ -5184,7 +5241,6 @@ __webpack_require__.r(__webpack_exports__);
       _this.date = r.data.data.date;
       _this.image = r.data.data.featured;
       _this.content = r.data.data.content;
-      console.log(r);
     });
   }
 });
@@ -40952,6 +41008,45 @@ component.options.__file = "resources/js/components/BlogList.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/BlogPopup.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/BlogPopup.vue ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BlogPopup_vue_vue_type_template_id_33796962_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BlogPopup.vue?vue&type=template&id=33796962&scoped=true& */ "./resources/js/components/BlogPopup.vue?vue&type=template&id=33796962&scoped=true&");
+/* harmony import */ var _BlogPopup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlogPopup.vue?vue&type=script&lang=js& */ "./resources/js/components/BlogPopup.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _BlogPopup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _BlogPopup_vue_vue_type_template_id_33796962_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _BlogPopup_vue_vue_type_template_id_33796962_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "33796962",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/BlogPopup.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/BlogPost.vue":
 /*!**********************************************!*\
   !*** ./resources/js/components/BlogPost.vue ***!
@@ -41007,6 +41102,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/BlogPopup.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/BlogPopup.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogPopup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogPopup.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogPopup.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogPopup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/BlogPost.vue?vue&type=script&lang=js&":
 /*!***********************************************************************!*\
   !*** ./resources/js/components/BlogPost.vue?vue&type=script&lang=js& ***!
@@ -41036,6 +41147,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogList_vue_vue_type_template_id_77c7ce6a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogList_vue_vue_type_template_id_77c7ce6a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogList.vue?vue&type=template&id=77c7ce6a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogList.vue?vue&type=template&id=77c7ce6a&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/BlogPopup.vue?vue&type=template&id=33796962&scoped=true&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/BlogPopup.vue?vue&type=template&id=33796962&scoped=true& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogPopup_vue_vue_type_template_id_33796962_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogPopup_vue_vue_type_template_id_33796962_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogPopup_vue_vue_type_template_id_33796962_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogPopup.vue?vue&type=template&id=33796962&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogPopup.vue?vue&type=template&id=33796962&scoped=true&");
 
 
 /***/ }),
@@ -41073,87 +41201,131 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "content blog" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "infinite-scroll",
-            rawName: "v-infinite-scroll",
-            value: _vm.loadMore,
-            expression: "loadMore"
+  return _c(
+    "div",
+    { staticClass: "content blog" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "infinite-scroll",
+              rawName: "v-infinite-scroll",
+              value: _vm.loadMore,
+              expression: "loadMore"
+            }
+          ],
+          staticClass: "row",
+          attrs: {
+            "infinite-scroll-disabled": "busy",
+            "infinite-scroll-distance": "500"
           }
-        ],
-        staticClass: "row",
-        attrs: {
-          "infinite-scroll-disabled": "busy",
-          "infinite-scroll-distance": "500"
-        }
-      },
-      [
-        _vm._l(_vm.posts, function(post) {
-          return _c(
-            "div",
-            { key: post.id, staticClass: "col col-lg-6 col-md-12" },
-            [
-              _c("div", { staticClass: "box-item" }, [
-                post.thumb
-                  ? _c("div", { staticClass: "image" }, [
-                      _c("a", { attrs: { href: "/blog/" + post.slug } }, [
-                        _c("img", {
-                          attrs: { src: post.thumb, alt: post.title }
-                        })
+        },
+        [
+          _vm._l(_vm.posts, function(post) {
+            return _c(
+              "div",
+              { key: post.id, staticClass: "col col-lg-6 col-md-12 col-sm-12" },
+              [
+                _c("div", { staticClass: "box-item" }, [
+                  post.thumb
+                    ? _c("div", { staticClass: "image" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "ajax-popup-link",
+                            attrs: { href: "/blog/" + post.slug },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.openPopup(post.slug)
+                              }
+                            }
+                          },
+                          [
+                            _c("img", {
+                              attrs: { src: post.thumb, alt: post.title }
+                            })
+                          ]
+                        )
                       ])
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _c("div", { staticClass: "desc" }, [
-                  _c("a", { attrs: { href: "/blog/" + post.slug } }, [
-                    _c("span", { staticClass: "date" }, [
-                      _vm._v(_vm._s(post.date))
-                    ])
-                  ]),
+                    : _vm._e(),
                   _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "name",
-                      attrs: { href: "/blog/" + post.slug },
-                      domProps: { innerHTML: _vm._s(post.title) }
-                    },
-                    [_vm._v(_vm._s(post.title))]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "text text-justify",
-                      domProps: { innerHTML: _vm._s(post.excerpt) }
-                    },
-                    [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(post.excerpt) +
-                          "\n                    "
-                      )
-                    ]
-                  )
+                  _c("div", { staticClass: "desc" }, [
+                    _c(
+                      "a",
+                      {
+                        attrs: { href: "/blog/" + post.slug },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.openPopup(post.slug)
+                          }
+                        }
+                      },
+                      [
+                        _c("span", { staticClass: "date" }, [
+                          _vm._v(_vm._s(post.date))
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "name ajax-popup-link",
+                        attrs: { href: "/blog/" + post.slug },
+                        domProps: { innerHTML: _vm._s(post.title) },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.openPopup(post.slug)
+                          }
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(post.title) +
+                            "\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "text text-justify",
+                        domProps: { innerHTML: _vm._s(post.excerpt) }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(post.excerpt) +
+                            "\n                    "
+                        )
+                      ]
+                    )
+                  ])
                 ])
-              ])
-            ]
-          )
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "clear" })
-      ],
-      2
-    ),
-    _vm._v(" "),
-    _vm._m(1)
-  ])
+              ]
+            )
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "clear" })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("blog-popup", { ref: "popup" })
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -41175,6 +41347,31 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogPopup.vue?vue&type=template&id=33796962&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogPopup.vue?vue&type=template&id=33796962&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div")
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

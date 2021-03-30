@@ -84,7 +84,6 @@ export default {
                 this.date = r.data.data.date;
                 this.image = r.data.data.featured;
                 this.content = r.data.data.content;
-                console.log(r);
             });
     }
 }

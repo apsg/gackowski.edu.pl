@@ -7,20 +7,31 @@
         </div>
 
         <!-- content -->
-        <div class="row" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="500">
+        <div class="row"
+             v-infinite-scroll="loadMore"
+             infinite-scroll-disabled="busy"
+             infinite-scroll-distance="500">
             <!-- blog item -->
-            <div v-for="post in posts" :key="post.id" class="col col-lg-6 col-md-12">
+            <div v-for="post in posts" :key="post.id" class="col col-lg-6 col-md-12 col-sm-12">
                 <div class="box-item">
                     <div class="image" v-if="post.thumb">
-                        <a :href="'/blog/' + post.slug">
+                        <a :href="'/blog/' + post.slug"
+                           @click.prevent="openPopup(post.slug)"
+                           class="ajax-popup-link">
                             <img :src="post.thumb" :alt="post.title"/>
                         </a>
                     </div>
                     <div class="desc">
-                        <a :href="'/blog/' + post.slug">
+                        <a :href="'/blog/' + post.slug"
+                           @click.prevent="openPopup(post.slug)">
                             <span class="date">{{ post.date }}</span>
                         </a>
-                        <a :href="'/blog/' + post.slug" class="name" v-html="post.title">{{ post.title }}</a>
+                        <a :href="'/blog/' + post.slug"
+                           @click.prevent="openPopup(post.slug)"
+                           class="name ajax-popup-link"
+                           v-html="post.title">
+                            {{ post.title }}
+                        </a>
                         <div class="text text-justify" v-html="post.excerpt">
                             {{ post.excerpt }}
                         </div>
@@ -38,12 +49,20 @@
             </nav>
         </div>
 
+        <blog-popup ref="popup"></blog-popup>
+
     </div>
 </template>
 
 <script>
+import BlogPopup from "./BlogPopup";
+
 export default {
     name: "BlogList",
+
+    components: {
+        'blog-popup': BlogPopup
+    },
 
     data() {
         return {
@@ -83,6 +102,10 @@ export default {
             this.busy = true;
             this.page++;
             this.getPage(this.page);
+        },
+
+        openPopup(slug) {
+            this.$refs.popup.open(slug);
         }
     }
 }

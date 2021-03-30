@@ -23,3 +23,4 @@ Vue.use(infiniteScroll);
 const app = new Vue({
     el: '#app',
 });
+

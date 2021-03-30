@@ -12,7 +12,7 @@ class PostResource extends JsonResource
             'title'   => $this->title(),
             'excerpt' => $this->excerpt(),
             'content' => $this->content(),
-            'date'    => $this->date()->format('Y-m-d H:i'),
+            'date'    => $this->date()->format('Y-m-d'),
             'slug'    => $this->slug(),
         ];
 
