@@ -1,5 +1,7 @@
 require('./bootstrap');
 
+import Typed from "typed.js";
+
 /**
  * Codersrank stuff
  */
@@ -16,18 +18,39 @@ window.customElements.define('codersrank-skills-chart', CodersRankSkillsChart);
 window.Vue = require('vue').default;
 Vue.component('blog-list', require('./components/BlogList.vue').default);
 Vue.component('blog-post', require('./components/BlogPost.vue').default);
-Vue.component('nav-link', require('./components/NavLink.vue').default);
 
 import infiniteScroll from 'vue-infinite-scroll';
+
 Vue.use(infiniteScroll);
 
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+
+Vue.use(VueRouter);
 
 import {router} from './router';
 
 const app = new Vue({
     router,
     el: '#app',
+    mounted() {
+        let typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            backDelay: 3500,
+            typeSpeed: 50,
+            loop: true
+        });
+        let typed2 = new Typed('#typed2', {
+            stringsElement: '#typed-strings2',
+            backDelay: 3500,
+            typeSpeed: 50,
+            loop: true
+        });
+    },
+
+    computed: {
+        isAbout() {
+            return this.$route.path === '/';
+        }
+    }
 });
 

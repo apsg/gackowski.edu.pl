@@ -6,7 +6,10 @@ import Resume from "./components/pages/Resume";
 import Works from "./components/pages/Works";
 
 const routes = [
-    {path: '/', component: About},
+    {
+        path: '/',
+        component: About,
+    },
     {path: '/contact', component: Contact},
     {path: '/resume', component: Resume},
     {path: '/works', component: Works},
@@ -20,6 +23,6 @@ export const router = new VueRouter({
     history: true,
     mode: 'history',
     linkActiveClass: 'active',
-    // transitionOnLoad: true,
-    // root: '/'
+    transitionOnLoad: true,
+    root: '/'
 });

@@ -11,3 +11,13 @@
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
+
+.header .top-menu ul li a.active {
+
+    *,
+    span,
+    .icon,
+    .link {
+        color: $color-theme;
+    }
+}

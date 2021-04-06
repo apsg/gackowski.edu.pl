@@ -32,6 +32,7 @@
         "@codersrank/summary": "^0.9.11",
         "@codersrank/work-experience": "^0.9.8",
         "@fortawesome/fontawesome-free": "^5.15.3",
+        "typed.js": "^2.0.12",
         "vue-infinite-scroll": "^2.0.2",
         "vue-router": "^3.5.1"
     }

@@ -5247,53 +5247,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/NavLink.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/NavLink.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "NavLink",
-  props: ['href'],
-  methods: {
-    goToLink: function goToLink() {
-      if (location.pathname !== '/') {
-        window.location.href = this.href;
-      }
-
-      var name = this.href.replace(window.location.origin + '/', '');
-      this.showTab(name);
-    },
-    showTab: function showTab(name) {
-      console.log(name);
-      window.location.pathname = '/' + name;
-    }
-  },
-  computed: {
-    isActive: function isActive() {
-      console.log(this.href, window.location.href);
-      return this.href === window.location.href;
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/About.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/About.vue?vue&type=script&lang=js& ***!
@@ -5305,6 +5258,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6229,15 +6187,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _codersrank_work_experience_esm_codersrank_work_experience__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @codersrank/work-experience/esm/codersrank-work-experience */ "./node_modules/@codersrank/work-experience/esm/codersrank-work-experience.js");
-/* harmony import */ var _codersrank_education_esm_codersrank_education__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @codersrank/education/esm/codersrank-education */ "./node_modules/@codersrank/education/esm/codersrank-education.js");
-/* harmony import */ var _codersrank_summary_esm_codersrank_summary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @codersrank/summary/esm/codersrank-summary */ "./node_modules/@codersrank/summary/esm/codersrank-summary.js");
-/* harmony import */ var _codersrank_skills_chart_esm_codersrank_skills_chart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @codersrank/skills-chart/esm/codersrank-skills-chart */ "./node_modules/@codersrank/skills-chart/esm/codersrank-skills-chart.js");
-/* harmony import */ var vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-infinite-scroll */ "./node_modules/vue-infinite-scroll/vue-infinite-scroll.js");
-/* harmony import */ var vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
+/* harmony import */ var typed_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! typed.js */ "./node_modules/typed.js/lib/typed.js");
+/* harmony import */ var typed_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(typed_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _codersrank_work_experience_esm_codersrank_work_experience__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @codersrank/work-experience/esm/codersrank-work-experience */ "./node_modules/@codersrank/work-experience/esm/codersrank-work-experience.js");
+/* harmony import */ var _codersrank_education_esm_codersrank_education__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @codersrank/education/esm/codersrank-education */ "./node_modules/@codersrank/education/esm/codersrank-education.js");
+/* harmony import */ var _codersrank_summary_esm_codersrank_summary__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @codersrank/summary/esm/codersrank-summary */ "./node_modules/@codersrank/summary/esm/codersrank-summary.js");
+/* harmony import */ var _codersrank_skills_chart_esm_codersrank_skills_chart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @codersrank/skills-chart/esm/codersrank-skills-chart */ "./node_modules/@codersrank/skills-chart/esm/codersrank-skills-chart.js");
+/* harmony import */ var vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-infinite-scroll */ "./node_modules/vue-infinite-scroll/vue-infinite-scroll.js");
+/* harmony import */ var vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
 /**
  * Codersrank stuff
  */
@@ -6246,23 +6208,40 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-
-window.customElements.define('codersrank-work-experience', _codersrank_work_experience_esm_codersrank_work_experience__WEBPACK_IMPORTED_MODULE_0__.default);
-window.customElements.define('codersrank-education', _codersrank_education_esm_codersrank_education__WEBPACK_IMPORTED_MODULE_1__.default);
-window.customElements.define('codersrank-summary', _codersrank_summary_esm_codersrank_summary__WEBPACK_IMPORTED_MODULE_2__.default);
-window.customElements.define('codersrank-skills-chart', _codersrank_skills_chart_esm_codersrank_skills_chart__WEBPACK_IMPORTED_MODULE_3__.default);
+window.customElements.define('codersrank-work-experience', _codersrank_work_experience_esm_codersrank_work_experience__WEBPACK_IMPORTED_MODULE_1__.default);
+window.customElements.define('codersrank-education', _codersrank_education_esm_codersrank_education__WEBPACK_IMPORTED_MODULE_2__.default);
+window.customElements.define('codersrank-summary', _codersrank_summary_esm_codersrank_summary__WEBPACK_IMPORTED_MODULE_3__.default);
+window.customElements.define('codersrank-skills-chart', _codersrank_skills_chart_esm_codersrank_skills_chart__WEBPACK_IMPORTED_MODULE_4__.default);
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
 Vue.component('blog-list', __webpack_require__(/*! ./components/BlogList.vue */ "./resources/js/components/BlogList.vue").default);
 Vue.component('blog-post', __webpack_require__(/*! ./components/BlogPost.vue */ "./resources/js/components/BlogPost.vue").default);
-Vue.component('nav-link', __webpack_require__(/*! ./components/NavLink.vue */ "./resources/js/components/NavLink.vue").default);
 
-Vue.use((vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_4___default()));
+Vue.use((vue_infinite_scroll__WEBPACK_IMPORTED_MODULE_5___default()));
 
-Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_5__.default);
+Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_6__.default);
 
 var app = new Vue({
-  router: _router__WEBPACK_IMPORTED_MODULE_6__.router,
-  el: '#app'
+  router: _router__WEBPACK_IMPORTED_MODULE_7__.router,
+  el: '#app',
+  mounted: function mounted() {
+    var typed = new (typed_js__WEBPACK_IMPORTED_MODULE_0___default())('#typed', {
+      stringsElement: '#typed-strings',
+      backDelay: 3500,
+      typeSpeed: 50,
+      loop: true
+    });
+    var typed2 = new (typed_js__WEBPACK_IMPORTED_MODULE_0___default())('#typed2', {
+      stringsElement: '#typed-strings2',
+      backDelay: 3500,
+      typeSpeed: 50,
+      loop: true
+    });
+  },
+  computed: {
+    isAbout: function isAbout() {
+      return this.$route.path === '/';
+    }
+  }
 });
 
 /***/ }),
@@ -6356,9 +6335,9 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_5__.default({
   hashbang: false,
   history: true,
   mode: 'history',
-  linkActiveClass: 'active' // transitionOnLoad: true,
-  // root: '/'
-
+  linkActiveClass: 'active',
+  transitionOnLoad: true,
+  root: '/'
 });
 
 /***/ }),
@@ -41759,6 +41738,1062 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/typed.js/lib/typed.js":
+/*!********************************************!*\
+  !*** ./node_modules/typed.js/lib/typed.js ***!
+  \********************************************/
+/***/ (function(module) {
+
+/*!
+ * 
+ *   typed.js - A JavaScript Typing Animation Library
+ *   Author: Matt Boldt <me@mattboldt.com>
+ *   Version: v2.0.12
+ *   Url: https://github.com/mattboldt/typed.js
+ *   License(s): MIT
+ * 
+ */
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __nested_webpack_require_737__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_737__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__nested_webpack_require_737__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__nested_webpack_require_737__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__nested_webpack_require_737__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __nested_webpack_require_737__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __nested_webpack_require_2018__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var _initializerJs = __nested_webpack_require_2018__(1);
+	
+	var _htmlParserJs = __nested_webpack_require_2018__(3);
+	
+	/**
+	 * Welcome to Typed.js!
+	 * @param {string} elementId HTML element ID _OR_ HTML element
+	 * @param {object} options options object
+	 * @returns {object} a new Typed object
+	 */
+	
+	var Typed = (function () {
+	  function Typed(elementId, options) {
+	    _classCallCheck(this, Typed);
+	
+	    // Initialize it up
+	    _initializerJs.initializer.load(this, options, elementId);
+	    // All systems go!
+	    this.begin();
+	  }
+	
+	  /**
+	   * Toggle start() and stop() of the Typed instance
+	   * @public
+	   */
+	
+	  _createClass(Typed, [{
+	    key: 'toggle',
+	    value: function toggle() {
+	      this.pause.status ? this.start() : this.stop();
+	    }
+	
+	    /**
+	     * Stop typing / backspacing and enable cursor blinking
+	     * @public
+	     */
+	  }, {
+	    key: 'stop',
+	    value: function stop() {
+	      if (this.typingComplete) return;
+	      if (this.pause.status) return;
+	      this.toggleBlinking(true);
+	      this.pause.status = true;
+	      this.options.onStop(this.arrayPos, this);
+	    }
+	
+	    /**
+	     * Start typing / backspacing after being stopped
+	     * @public
+	     */
+	  }, {
+	    key: 'start',
+	    value: function start() {
+	      if (this.typingComplete) return;
+	      if (!this.pause.status) return;
+	      this.pause.status = false;
+	      if (this.pause.typewrite) {
+	        this.typewrite(this.pause.curString, this.pause.curStrPos);
+	      } else {
+	        this.backspace(this.pause.curString, this.pause.curStrPos);
+	      }
+	      this.options.onStart(this.arrayPos, this);
+	    }
+	
+	    /**
+	     * Destroy this instance of Typed
+	     * @public
+	     */
+	  }, {
+	    key: 'destroy',
+	    value: function destroy() {
+	      this.reset(false);
+	      this.options.onDestroy(this);
+	    }
+	
+	    /**
+	     * Reset Typed and optionally restarts
+	     * @param {boolean} restart
+	     * @public
+	     */
+	  }, {
+	    key: 'reset',
+	    value: function reset() {
+	      var restart = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+	
+	      clearInterval(this.timeout);
+	      this.replaceText('');
+	      if (this.cursor && this.cursor.parentNode) {
+	        this.cursor.parentNode.removeChild(this.cursor);
+	        this.cursor = null;
+	      }
+	      this.strPos = 0;
+	      this.arrayPos = 0;
+	      this.curLoop = 0;
+	      if (restart) {
+	        this.insertCursor();
+	        this.options.onReset(this);
+	        this.begin();
+	      }
+	    }
+	
+	    /**
+	     * Begins the typing animation
+	     * @private
+	     */
+	  }, {
+	    key: 'begin',
+	    value: function begin() {
+	      var _this = this;
+	
+	      this.options.onBegin(this);
+	      this.typingComplete = false;
+	      this.shuffleStringsIfNeeded(this);
+	      this.insertCursor();
+	      if (this.bindInputFocusEvents) this.bindFocusEvents();
+	      this.timeout = setTimeout(function () {
+	        // Check if there is some text in the element, if yes start by backspacing the default message
+	        if (!_this.currentElContent || _this.currentElContent.length === 0) {
+	          _this.typewrite(_this.strings[_this.sequence[_this.arrayPos]], _this.strPos);
+	        } else {
+	          // Start typing
+	          _this.backspace(_this.currentElContent, _this.currentElContent.length);
+	        }
+	      }, this.startDelay);
+	    }
+	
+	    /**
+	     * Called for each character typed
+	     * @param {string} curString the current string in the strings array
+	     * @param {number} curStrPos the current position in the curString
+	     * @private
+	     */
+	  }, {
+	    key: 'typewrite',
+	    value: function typewrite(curString, curStrPos) {
+	      var _this2 = this;
+	
+	      if (this.fadeOut && this.el.classList.contains(this.fadeOutClass)) {
+	        this.el.classList.remove(this.fadeOutClass);
+	        if (this.cursor) this.cursor.classList.remove(this.fadeOutClass);
+	      }
+	
+	      var humanize = this.humanizer(this.typeSpeed);
+	      var numChars = 1;
+	
+	      if (this.pause.status === true) {
+	        this.setPauseStatus(curString, curStrPos, true);
+	        return;
+	      }
+	
+	      // contain typing function in a timeout humanize'd delay
+	      this.timeout = setTimeout(function () {
+	        // skip over any HTML chars
+	        curStrPos = _htmlParserJs.htmlParser.typeHtmlChars(curString, curStrPos, _this2);
+	
+	        var pauseTime = 0;
+	        var substr = curString.substr(curStrPos);
+	        // check for an escape character before a pause value
+	        // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
+	        // single ^ are removed from string
+	        if (substr.charAt(0) === '^') {
+	          if (/^\^\d+/.test(substr)) {
+	            var skip = 1; // skip at least 1
+	            substr = /\d+/.exec(substr)[0];
+	            skip += substr.length;
+	            pauseTime = parseInt(substr);
+	            _this2.temporaryPause = true;
+	            _this2.options.onTypingPaused(_this2.arrayPos, _this2);
+	            // strip out the escape character and pause value so they're not printed
+	            curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);
+	            _this2.toggleBlinking(true);
+	          }
+	        }
+	
+	        // check for skip characters formatted as
+	        // "this is a `string to print NOW` ..."
+	        if (substr.charAt(0) === '`') {
+	          while (curString.substr(curStrPos + numChars).charAt(0) !== '`') {
+	            numChars++;
+	            if (curStrPos + numChars > curString.length) break;
+	          }
+	          // strip out the escape characters and append all the string in between
+	          var stringBeforeSkip = curString.substring(0, curStrPos);
+	          var stringSkipped = curString.substring(stringBeforeSkip.length + 1, curStrPos + numChars);
+	          var stringAfterSkip = curString.substring(curStrPos + numChars + 1);
+	          curString = stringBeforeSkip + stringSkipped + stringAfterSkip;
+	          numChars--;
+	        }
+	
+	        // timeout for any pause after a character
+	        _this2.timeout = setTimeout(function () {
+	          // Accounts for blinking while paused
+	          _this2.toggleBlinking(false);
+	
+	          // We're done with this sentence!
+	          if (curStrPos >= curString.length) {
+	            _this2.doneTyping(curString, curStrPos);
+	          } else {
+	            _this2.keepTyping(curString, curStrPos, numChars);
+	          }
+	          // end of character pause
+	          if (_this2.temporaryPause) {
+	            _this2.temporaryPause = false;
+	            _this2.options.onTypingResumed(_this2.arrayPos, _this2);
+	          }
+	        }, pauseTime);
+	
+	        // humanized value for typing
+	      }, humanize);
+	    }
+	
+	    /**
+	     * Continue to the next string & begin typing
+	     * @param {string} curString the current string in the strings array
+	     * @param {number} curStrPos the current position in the curString
+	     * @private
+	     */
+	  }, {
+	    key: 'keepTyping',
+	    value: function keepTyping(curString, curStrPos, numChars) {
+	      // call before functions if applicable
+	      if (curStrPos === 0) {
+	        this.toggleBlinking(false);
+	        this.options.preStringTyped(this.arrayPos, this);
+	      }
+	      // start typing each new char into existing string
+	      // curString: arg, this.el.html: original text inside element
+	      curStrPos += numChars;
+	      var nextString = curString.substr(0, curStrPos);
+	      this.replaceText(nextString);
+	      // loop the function
+	      this.typewrite(curString, curStrPos);
+	    }
+	
+	    /**
+	     * We're done typing the current string
+	     * @param {string} curString the current string in the strings array
+	     * @param {number} curStrPos the current position in the curString
+	     * @private
+	     */
+	  }, {
+	    key: 'doneTyping',
+	    value: function doneTyping(curString, curStrPos) {
+	      var _this3 = this;
+	
+	      // fires callback function
+	      this.options.onStringTyped(this.arrayPos, this);
+	      this.toggleBlinking(true);
+	      // is this the final string
+	      if (this.arrayPos === this.strings.length - 1) {
+	        // callback that occurs on the last typed string
+	        this.complete();
+	        // quit if we wont loop back
+	        if (this.loop === false || this.curLoop === this.loopCount) {
+	          return;
+	        }
+	      }
+	      this.timeout = setTimeout(function () {
+	        _this3.backspace(curString, curStrPos);
+	      }, this.backDelay);
+	    }
+	
+	    /**
+	     * Backspaces 1 character at a time
+	     * @param {string} curString the current string in the strings array
+	     * @param {number} curStrPos the current position in the curString
+	     * @private
+	     */
+	  }, {
+	    key: 'backspace',
+	    value: function backspace(curString, curStrPos) {
+	      var _this4 = this;
+	
+	      if (this.pause.status === true) {
+	        this.setPauseStatus(curString, curStrPos, false);
+	        return;
+	      }
+	      if (this.fadeOut) return this.initFadeOut();
+	
+	      this.toggleBlinking(false);
+	      var humanize = this.humanizer(this.backSpeed);
+	
+	      this.timeout = setTimeout(function () {
+	        curStrPos = _htmlParserJs.htmlParser.backSpaceHtmlChars(curString, curStrPos, _this4);
+	        // replace text with base text + typed characters
+	        var curStringAtPosition = curString.substr(0, curStrPos);
+	        _this4.replaceText(curStringAtPosition);
+	
+	        // if smartBack is enabled
+	        if (_this4.smartBackspace) {
+	          // the remaining part of the current string is equal of the same part of the new string
+	          var nextString = _this4.strings[_this4.arrayPos + 1];
+	          if (nextString && curStringAtPosition === nextString.substr(0, curStrPos)) {
+	            _this4.stopNum = curStrPos;
+	          } else {
+	            _this4.stopNum = 0;
+	          }
+	        }
+	
+	        // if the number (id of character in current string) is
+	        // less than the stop number, keep going
+	        if (curStrPos > _this4.stopNum) {
+	          // subtract characters one by one
+	          curStrPos--;
+	          // loop the function
+	          _this4.backspace(curString, curStrPos);
+	        } else if (curStrPos <= _this4.stopNum) {
+	          // if the stop number has been reached, increase
+	          // array position to next string
+	          _this4.arrayPos++;
+	          // When looping, begin at the beginning after backspace complete
+	          if (_this4.arrayPos === _this4.strings.length) {
+	            _this4.arrayPos = 0;
+	            _this4.options.onLastStringBackspaced();
+	            _this4.shuffleStringsIfNeeded();
+	            _this4.begin();
+	          } else {
+	            _this4.typewrite(_this4.strings[_this4.sequence[_this4.arrayPos]], curStrPos);
+	          }
+	        }
+	        // humanized value for typing
+	      }, humanize);
+	    }
+	
+	    /**
+	     * Full animation is complete
+	     * @private
+	     */
+	  }, {
+	    key: 'complete',
+	    value: function complete() {
+	      this.options.onComplete(this);
+	      if (this.loop) {
+	        this.curLoop++;
+	      } else {
+	        this.typingComplete = true;
+	      }
+	    }
+	
+	    /**
+	     * Has the typing been stopped
+	     * @param {string} curString the current string in the strings array
+	     * @param {number} curStrPos the current position in the curString
+	     * @param {boolean} isTyping
+	     * @private
+	     */
+	  }, {
+	    key: 'setPauseStatus',
+	    value: function setPauseStatus(curString, curStrPos, isTyping) {
+	      this.pause.typewrite = isTyping;
+	      this.pause.curString = curString;
+	      this.pause.curStrPos = curStrPos;
+	    }
+	
+	    /**
+	     * Toggle the blinking cursor
+	     * @param {boolean} isBlinking
+	     * @private
+	     */
+	  }, {
+	    key: 'toggleBlinking',
+	    value: function toggleBlinking(isBlinking) {
+	      if (!this.cursor) return;
+	      // if in paused state, don't toggle blinking a 2nd time
+	      if (this.pause.status) return;
+	      if (this.cursorBlinking === isBlinking) return;
+	      this.cursorBlinking = isBlinking;
+	      if (isBlinking) {
+	        this.cursor.classList.add('typed-cursor--blink');
+	      } else {
+	        this.cursor.classList.remove('typed-cursor--blink');
+	      }
+	    }
+	
+	    /**
+	     * Speed in MS to type
+	     * @param {number} speed
+	     * @private
+	     */
+	  }, {
+	    key: 'humanizer',
+	    value: function humanizer(speed) {
+	      return Math.round(Math.random() * speed / 2) + speed;
+	    }
+	
+	    /**
+	     * Shuffle the sequence of the strings array
+	     * @private
+	     */
+	  }, {
+	    key: 'shuffleStringsIfNeeded',
+	    value: function shuffleStringsIfNeeded() {
+	      if (!this.shuffle) return;
+	      this.sequence = this.sequence.sort(function () {
+	        return Math.random() - 0.5;
+	      });
+	    }
+	
+	    /**
+	     * Adds a CSS class to fade out current string
+	     * @private
+	     */
+	  }, {
+	    key: 'initFadeOut',
+	    value: function initFadeOut() {
+	      var _this5 = this;
+	
+	      this.el.className += ' ' + this.fadeOutClass;
+	      if (this.cursor) this.cursor.className += ' ' + this.fadeOutClass;
+	      return setTimeout(function () {
+	        _this5.arrayPos++;
+	        _this5.replaceText('');
+	
+	        // Resets current string if end of loop reached
+	        if (_this5.strings.length > _this5.arrayPos) {
+	          _this5.typewrite(_this5.strings[_this5.sequence[_this5.arrayPos]], 0);
+	        } else {
+	          _this5.typewrite(_this5.strings[0], 0);
+	          _this5.arrayPos = 0;
+	        }
+	      }, this.fadeOutDelay);
+	    }
+	
+	    /**
+	     * Replaces current text in the HTML element
+	     * depending on element type
+	     * @param {string} str
+	     * @private
+	     */
+	  }, {
+	    key: 'replaceText',
+	    value: function replaceText(str) {
+	      if (this.attr) {
+	        this.el.setAttribute(this.attr, str);
+	      } else {
+	        if (this.isInput) {
+	          this.el.value = str;
+	        } else if (this.contentType === 'html') {
+	          this.el.innerHTML = str;
+	        } else {
+	          this.el.textContent = str;
+	        }
+	      }
+	    }
+	
+	    /**
+	     * If using input elements, bind focus in order to
+	     * start and stop the animation
+	     * @private
+	     */
+	  }, {
+	    key: 'bindFocusEvents',
+	    value: function bindFocusEvents() {
+	      var _this6 = this;
+	
+	      if (!this.isInput) return;
+	      this.el.addEventListener('focus', function (e) {
+	        _this6.stop();
+	      });
+	      this.el.addEventListener('blur', function (e) {
+	        if (_this6.el.value && _this6.el.value.length !== 0) {
+	          return;
+	        }
+	        _this6.start();
+	      });
+	    }
+	
+	    /**
+	     * On init, insert the cursor element
+	     * @private
+	     */
+	  }, {
+	    key: 'insertCursor',
+	    value: function insertCursor() {
+	      if (!this.showCursor) return;
+	      if (this.cursor) return;
+	      this.cursor = document.createElement('span');
+	      this.cursor.className = 'typed-cursor';
+	      this.cursor.setAttribute('aria-hidden', true);
+	      this.cursor.innerHTML = this.cursorChar;
+	      this.el.parentNode && this.el.parentNode.insertBefore(this.cursor, this.el.nextSibling);
+	    }
+	  }]);
+	
+	  return Typed;
+	})();
+	
+	exports['default'] = Typed;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __nested_webpack_require_18228__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var _defaultsJs = __nested_webpack_require_18228__(2);
+	
+	var _defaultsJs2 = _interopRequireDefault(_defaultsJs);
+	
+	/**
+	 * Initialize the Typed object
+	 */
+	
+	var Initializer = (function () {
+	  function Initializer() {
+	    _classCallCheck(this, Initializer);
+	  }
+	
+	  _createClass(Initializer, [{
+	    key: 'load',
+	
+	    /**
+	     * Load up defaults & options on the Typed instance
+	     * @param {Typed} self instance of Typed
+	     * @param {object} options options object
+	     * @param {string} elementId HTML element ID _OR_ instance of HTML element
+	     * @private
+	     */
+	
+	    value: function load(self, options, elementId) {
+	      // chosen element to manipulate text
+	      if (typeof elementId === 'string') {
+	        self.el = document.querySelector(elementId);
+	      } else {
+	        self.el = elementId;
+	      }
+	
+	      self.options = _extends({}, _defaultsJs2['default'], options);
+	
+	      // attribute to type into
+	      self.isInput = self.el.tagName.toLowerCase() === 'input';
+	      self.attr = self.options.attr;
+	      self.bindInputFocusEvents = self.options.bindInputFocusEvents;
+	
+	      // show cursor
+	      self.showCursor = self.isInput ? false : self.options.showCursor;
+	
+	      // custom cursor
+	      self.cursorChar = self.options.cursorChar;
+	
+	      // Is the cursor blinking
+	      self.cursorBlinking = true;
+	
+	      // text content of element
+	      self.elContent = self.attr ? self.el.getAttribute(self.attr) : self.el.textContent;
+	
+	      // html or plain text
+	      self.contentType = self.options.contentType;
+	
+	      // typing speed
+	      self.typeSpeed = self.options.typeSpeed;
+	
+	      // add a delay before typing starts
+	      self.startDelay = self.options.startDelay;
+	
+	      // backspacing speed
+	      self.backSpeed = self.options.backSpeed;
+	
+	      // only backspace what doesn't match the previous string
+	      self.smartBackspace = self.options.smartBackspace;
+	
+	      // amount of time to wait before backspacing
+	      self.backDelay = self.options.backDelay;
+	
+	      // Fade out instead of backspace
+	      self.fadeOut = self.options.fadeOut;
+	      self.fadeOutClass = self.options.fadeOutClass;
+	      self.fadeOutDelay = self.options.fadeOutDelay;
+	
+	      // variable to check whether typing is currently paused
+	      self.isPaused = false;
+	
+	      // input strings of text
+	      self.strings = self.options.strings.map(function (s) {
+	        return s.trim();
+	      });
+	
+	      // div containing strings
+	      if (typeof self.options.stringsElement === 'string') {
+	        self.stringsElement = document.querySelector(self.options.stringsElement);
+	      } else {
+	        self.stringsElement = self.options.stringsElement;
+	      }
+	
+	      if (self.stringsElement) {
+	        self.strings = [];
+	        self.stringsElement.style.display = 'none';
+	        var strings = Array.prototype.slice.apply(self.stringsElement.children);
+	        var stringsLength = strings.length;
+	
+	        if (stringsLength) {
+	          for (var i = 0; i < stringsLength; i += 1) {
+	            var stringEl = strings[i];
+	            self.strings.push(stringEl.innerHTML.trim());
+	          }
+	        }
+	      }
+	
+	      // character number position of current string
+	      self.strPos = 0;
+	
+	      // current array position
+	      self.arrayPos = 0;
+	
+	      // index of string to stop backspacing on
+	      self.stopNum = 0;
+	
+	      // Looping logic
+	      self.loop = self.options.loop;
+	      self.loopCount = self.options.loopCount;
+	      self.curLoop = 0;
+	
+	      // shuffle the strings
+	      self.shuffle = self.options.shuffle;
+	      // the order of strings
+	      self.sequence = [];
+	
+	      self.pause = {
+	        status: false,
+	        typewrite: true,
+	        curString: '',
+	        curStrPos: 0
+	      };
+	
+	      // When the typing is complete (when not looped)
+	      self.typingComplete = false;
+	
+	      // Set the order in which the strings are typed
+	      for (var i in self.strings) {
+	        self.sequence[i] = i;
+	      }
+	
+	      // If there is some text in the element
+	      self.currentElContent = this.getCurrentElContent(self);
+	
+	      self.autoInsertCss = self.options.autoInsertCss;
+	
+	      this.appendAnimationCss(self);
+	    }
+	  }, {
+	    key: 'getCurrentElContent',
+	    value: function getCurrentElContent(self) {
+	      var elContent = '';
+	      if (self.attr) {
+	        elContent = self.el.getAttribute(self.attr);
+	      } else if (self.isInput) {
+	        elContent = self.el.value;
+	      } else if (self.contentType === 'html') {
+	        elContent = self.el.innerHTML;
+	      } else {
+	        elContent = self.el.textContent;
+	      }
+	      return elContent;
+	    }
+	  }, {
+	    key: 'appendAnimationCss',
+	    value: function appendAnimationCss(self) {
+	      var cssDataName = 'data-typed-js-css';
+	      if (!self.autoInsertCss) {
+	        return;
+	      }
+	      if (!self.showCursor && !self.fadeOut) {
+	        return;
+	      }
+	      if (document.querySelector('[' + cssDataName + ']')) {
+	        return;
+	      }
+	
+	      var css = document.createElement('style');
+	      css.type = 'text/css';
+	      css.setAttribute(cssDataName, true);
+	
+	      var innerCss = '';
+	      if (self.showCursor) {
+	        innerCss += '\n        .typed-cursor{\n          opacity: 1;\n        }\n        .typed-cursor.typed-cursor--blink{\n          animation: typedjsBlink 0.7s infinite;\n          -webkit-animation: typedjsBlink 0.7s infinite;\n                  animation: typedjsBlink 0.7s infinite;\n        }\n        @keyframes typedjsBlink{\n          50% { opacity: 0.0; }\n        }\n        @-webkit-keyframes typedjsBlink{\n          0% { opacity: 1; }\n          50% { opacity: 0.0; }\n          100% { opacity: 1; }\n        }\n      ';
+	      }
+	      if (self.fadeOut) {
+	        innerCss += '\n        .typed-fade-out{\n          opacity: 0;\n          transition: opacity .25s;\n        }\n        .typed-cursor.typed-cursor--blink.typed-fade-out{\n          -webkit-animation: 0;\n          animation: 0;\n        }\n      ';
+	      }
+	      if (css.length === 0) {
+	        return;
+	      }
+	      css.innerHTML = innerCss;
+	      document.body.appendChild(css);
+	    }
+	  }]);
+	
+	  return Initializer;
+	})();
+	
+	exports['default'] = Initializer;
+	var initializer = new Initializer();
+	exports.initializer = initializer;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+	/**
+	 * Defaults & options
+	 * @returns {object} Typed defaults & options
+	 * @public
+	 */
+	
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var defaults = {
+	  /**
+	   * @property {array} strings strings to be typed
+	   * @property {string} stringsElement ID of element containing string children
+	   */
+	  strings: ['These are the default values...', 'You know what you should do?', 'Use your own!', 'Have a great day!'],
+	  stringsElement: null,
+	
+	  /**
+	   * @property {number} typeSpeed type speed in milliseconds
+	   */
+	  typeSpeed: 0,
+	
+	  /**
+	   * @property {number} startDelay time before typing starts in milliseconds
+	   */
+	  startDelay: 0,
+	
+	  /**
+	   * @property {number} backSpeed backspacing speed in milliseconds
+	   */
+	  backSpeed: 0,
+	
+	  /**
+	   * @property {boolean} smartBackspace only backspace what doesn't match the previous string
+	   */
+	  smartBackspace: true,
+	
+	  /**
+	   * @property {boolean} shuffle shuffle the strings
+	   */
+	  shuffle: false,
+	
+	  /**
+	   * @property {number} backDelay time before backspacing in milliseconds
+	   */
+	  backDelay: 700,
+	
+	  /**
+	   * @property {boolean} fadeOut Fade out instead of backspace
+	   * @property {string} fadeOutClass css class for fade animation
+	   * @property {boolean} fadeOutDelay Fade out delay in milliseconds
+	   */
+	  fadeOut: false,
+	  fadeOutClass: 'typed-fade-out',
+	  fadeOutDelay: 500,
+	
+	  /**
+	   * @property {boolean} loop loop strings
+	   * @property {number} loopCount amount of loops
+	   */
+	  loop: false,
+	  loopCount: Infinity,
+	
+	  /**
+	   * @property {boolean} showCursor show cursor
+	   * @property {string} cursorChar character for cursor
+	   * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
+	   */
+	  showCursor: true,
+	  cursorChar: '|',
+	  autoInsertCss: true,
+	
+	  /**
+	   * @property {string} attr attribute for typing
+	   * Ex: input placeholder, value, or just HTML text
+	   */
+	  attr: null,
+	
+	  /**
+	   * @property {boolean} bindInputFocusEvents bind to focus and blur if el is text input
+	   */
+	  bindInputFocusEvents: false,
+	
+	  /**
+	   * @property {string} contentType 'html' or 'null' for plaintext
+	   */
+	  contentType: 'html',
+	
+	  /**
+	   * Before it begins typing
+	   * @param {Typed} self
+	   */
+	  onBegin: function onBegin(self) {},
+	
+	  /**
+	   * All typing is complete
+	   * @param {Typed} self
+	   */
+	  onComplete: function onComplete(self) {},
+	
+	  /**
+	   * Before each string is typed
+	   * @param {number} arrayPos
+	   * @param {Typed} self
+	   */
+	  preStringTyped: function preStringTyped(arrayPos, self) {},
+	
+	  /**
+	   * After each string is typed
+	   * @param {number} arrayPos
+	   * @param {Typed} self
+	   */
+	  onStringTyped: function onStringTyped(arrayPos, self) {},
+	
+	  /**
+	   * During looping, after last string is typed
+	   * @param {Typed} self
+	   */
+	  onLastStringBackspaced: function onLastStringBackspaced(self) {},
+	
+	  /**
+	   * Typing has been stopped
+	   * @param {number} arrayPos
+	   * @param {Typed} self
+	   */
+	  onTypingPaused: function onTypingPaused(arrayPos, self) {},
+	
+	  /**
+	   * Typing has been started after being stopped
+	   * @param {number} arrayPos
+	   * @param {Typed} self
+	   */
+	  onTypingResumed: function onTypingResumed(arrayPos, self) {},
+	
+	  /**
+	   * After reset
+	   * @param {Typed} self
+	   */
+	  onReset: function onReset(self) {},
+	
+	  /**
+	   * After stop
+	   * @param {number} arrayPos
+	   * @param {Typed} self
+	   */
+	  onStop: function onStop(arrayPos, self) {},
+	
+	  /**
+	   * After start
+	   * @param {number} arrayPos
+	   * @param {Typed} self
+	   */
+	  onStart: function onStart(arrayPos, self) {},
+	
+	  /**
+	   * After destroy
+	   * @param {Typed} self
+	   */
+	  onDestroy: function onDestroy(self) {}
+	};
+	
+	exports['default'] = defaults;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+	/**
+	 * TODO: These methods can probably be combined somehow
+	 * Parse HTML tags & HTML Characters
+	 */
+	
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var HTMLParser = (function () {
+	  function HTMLParser() {
+	    _classCallCheck(this, HTMLParser);
+	  }
+	
+	  _createClass(HTMLParser, [{
+	    key: 'typeHtmlChars',
+	
+	    /**
+	     * Type HTML tags & HTML Characters
+	     * @param {string} curString Current string
+	     * @param {number} curStrPos Position in current string
+	     * @param {Typed} self instance of Typed
+	     * @returns {number} a new string position
+	     * @private
+	     */
+	
+	    value: function typeHtmlChars(curString, curStrPos, self) {
+	      if (self.contentType !== 'html') return curStrPos;
+	      var curChar = curString.substr(curStrPos).charAt(0);
+	      if (curChar === '<' || curChar === '&') {
+	        var endTag = '';
+	        if (curChar === '<') {
+	          endTag = '>';
+	        } else {
+	          endTag = ';';
+	        }
+	        while (curString.substr(curStrPos + 1).charAt(0) !== endTag) {
+	          curStrPos++;
+	          if (curStrPos + 1 > curString.length) {
+	            break;
+	          }
+	        }
+	        curStrPos++;
+	      }
+	      return curStrPos;
+	    }
+	
+	    /**
+	     * Backspace HTML tags and HTML Characters
+	     * @param {string} curString Current string
+	     * @param {number} curStrPos Position in current string
+	     * @param {Typed} self instance of Typed
+	     * @returns {number} a new string position
+	     * @private
+	     */
+	  }, {
+	    key: 'backSpaceHtmlChars',
+	    value: function backSpaceHtmlChars(curString, curStrPos, self) {
+	      if (self.contentType !== 'html') return curStrPos;
+	      var curChar = curString.substr(curStrPos).charAt(0);
+	      if (curChar === '>' || curChar === ';') {
+	        var endTag = '';
+	        if (curChar === '>') {
+	          endTag = '<';
+	        } else {
+	          endTag = '&';
+	        }
+	        while (curString.substr(curStrPos - 1).charAt(0) !== endTag) {
+	          curStrPos--;
+	          if (curStrPos < 0) {
+	            break;
+	          }
+	        }
+	        curStrPos--;
+	      }
+	      return curStrPos;
+	    }
+	  }]);
+	
+	  return HTMLParser;
+	})();
+	
+	exports['default'] = HTMLParser;
+	var htmlParser = new HTMLParser();
+	exports.htmlParser = htmlParser;
+
+/***/ })
+/******/ ])
+});
+;
+
+/***/ }),
+
 /***/ "./node_modules/vue-infinite-scroll/vue-infinite-scroll.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/vue-infinite-scroll/vue-infinite-scroll.js ***!
@@ -42119,45 +43154,6 @@ component.options.__file = "resources/js/components/BlogPost.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/NavLink.vue":
-/*!*********************************************!*\
-  !*** ./resources/js/components/NavLink.vue ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _NavLink_vue_vue_type_template_id_042986a2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NavLink.vue?vue&type=template&id=042986a2&scoped=true& */ "./resources/js/components/NavLink.vue?vue&type=template&id=042986a2&scoped=true&");
-/* harmony import */ var _NavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavLink.vue?vue&type=script&lang=js& */ "./resources/js/components/NavLink.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _NavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _NavLink_vue_vue_type_template_id_042986a2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _NavLink_vue_vue_type_template_id_042986a2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  "042986a2",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/NavLink.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/pages/About.vue":
 /*!*************************************************!*\
   !*** ./resources/js/components/pages/About.vue ***!
@@ -42401,22 +43397,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/NavLink.vue?vue&type=script&lang=js&":
-/*!**********************************************************************!*\
-  !*** ./resources/js/components/NavLink.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NavLink.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/NavLink.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavLink_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
-
-/***/ }),
-
 /***/ "./resources/js/components/pages/About.vue?vue&type=script&lang=js&":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/pages/About.vue?vue&type=script&lang=js& ***!
@@ -42544,23 +43524,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogPost_vue_vue_type_template_id_bdf3a066_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlogPost_vue_vue_type_template_id_bdf3a066_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogPost.vue?vue&type=template&id=bdf3a066&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BlogPost.vue?vue&type=template&id=bdf3a066&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/NavLink.vue?vue&type=template&id=042986a2&scoped=true&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/components/NavLink.vue?vue&type=template&id=042986a2&scoped=true& ***!
-  \****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavLink_vue_vue_type_template_id_042986a2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavLink_vue_vue_type_template_id_042986a2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavLink_vue_vue_type_template_id_042986a2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NavLink.vue?vue&type=template&id=042986a2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/NavLink.vue?vue&type=template&id=042986a2&scoped=true&");
 
 
 /***/ }),
@@ -42922,46 +43885,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/NavLink.vue?vue&type=template&id=042986a2&scoped=true&":
-/*!*******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/NavLink.vue?vue&type=template&id=042986a2&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("li", { class: { active: _vm.isActive } }, [
-    _c(
-      "a",
-      {
-        attrs: { href: _vm.href },
-        on: {
-          click: function($event) {
-            $event.preventDefault()
-            return _vm.goToLink($event)
-          }
-        }
-      },
-      [_vm._t("default")],
-      2
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/About.vue?vue&type=template&id=22a27132&scoped=true&":
 /*!***********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/About.vue?vue&type=template&id=22a27132&scoped=true& ***!
@@ -43025,7 +43948,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  'Od 2005 r. zajmuję się projektowaniem i tworzeniem stron internetowych. Więcej na temat\n                                mojego doświadczenia i stosowanych technologii znajdziesz w sekcji "resume".\n                            '
+                  'Od 2005 r. zajmuję się projektowaniem i tworzeniem stron internetowych. Więcej na\n                                temat\n                                mojego doświadczenia i stosowanych technologii znajdziesz w sekcji "resume".\n                            '
                 )
               ]),
               _vm._v(" "),
@@ -43035,7 +43958,7 @@ var staticRenderFns = [
                 _vm._v("Jestem "),
                 _c("strong", [_vm._v("doktorem nauk technicznych")]),
                 _vm._v(
-                  ", w dyscyplinie automatyka i robotyka,\n                                specjalności identyfikacja procesów. Doktorat obroniłem na "
+                  ", w dyscyplinie automatyka i\n                                robotyka,\n                                specjalności identyfikacja procesów. Doktorat obroniłem na "
                 ),
                 _c("strong", [
                   _vm._v(
@@ -43241,20 +44164,20 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "Mam wieloletnie doświadczenie w przeprowadzaniu szkoleń z różnych tematów, nie tylko\n                                związanych z szeroko pojętymi technologiami komputerowymi. Jako doktorant byłem\n                                również pracownikiem dydaktycznym Politechniki Gdańskiej i prowadziłem zajęcia z różnych\n                                przedmiotów technicznych."
+                  "Mam wieloletnie doświadczenie w przeprowadzaniu szkoleń z różnych tematów, nie tylko\n                                związanych z szeroko pojętymi technologiami komputerowymi. Jako doktorant byłem\n                                również pracownikiem dydaktycznym Politechniki Gdańskiej i prowadziłem zajęcia z\n                                różnych\n                                przedmiotów technicznych."
                 )
               ]),
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "Jestem w stanie przygotować i przeprowadzić (zarówno na żywo, jak i w większości\n                                przypadków w formule szkolenia na odległość, tzw. e-learningu) szkolenia z następujących\n                                tematów:"
+                  "Jestem w stanie przygotować i przeprowadzić (zarówno na żywo, jak i w większości\n                                przypadków w formule szkolenia na odległość, tzw. e-learningu) szkolenia z\n                                następujących\n                                tematów:"
                 )
               ]),
               _vm._v(" "),
               _c("ul", [
                 _c("li", [
                   _vm._v(
-                    "Techniki bushcraftowe, etyka działań na świeżym powietrzu (jestem jedynym w Polsce\n                                    Master Educator "
+                    "Techniki bushcraftowe, etyka działań na świeżym powietrzu (jestem jedynym w\n                                    Polsce\n                                    Master Educator "
                   ),
                   _c(
                     "a",
@@ -43310,19 +44233,19 @@ var staticRenderFns = [
                   _c("ul", [
                     _c("li", [
                       _vm._v(
-                        "C# – ponad 2 lata pracy dla szwedzkiej firmy MedicWave AB jako programista\n                                            biblioteki do wizualizacji danych medycznych.\n                                        "
+                        "C# – ponad 2 lata pracy dla szwedzkiej firmy MedicWave AB jako\n                                            programista\n                                            biblioteki do wizualizacji danych medycznych.\n                                        "
                       )
                     ]),
                     _vm._v(" "),
                     _c("li", [
                       _vm._v(
-                        "PHP (+ oczywiście HTML, JavaScritp…) – w ciągu ostatnich 7 lat zrealizowałem\n                                            szereg projektów w oparciu o te języki.\n                                        "
+                        "PHP (+ oczywiście HTML, JavaScritp…) – w ciągu ostatnich 7 lat\n                                            zrealizowałem\n                                            szereg projektów w oparciu o te języki.\n                                        "
                       )
                     ]),
                     _vm._v(" "),
                     _c("li", [
                       _vm._v(
-                        "MATLAB – moje studia, praca magisterska, a od 5 lat również praca\n                                            naukowa opiera się na wykorzystaniu MATLABA. Prowadziłem również dla\n                                            studentów laboratoria z przedmiotu „Języki Modelowania i Symulacji” które\n                                            skupiały się na wykorzystaniu MATLABA w modelowaniu i symulacji\n                                            rzeczywistych procesów.\n                                        "
+                        "MATLAB – moje studia, praca magisterska, a od 5 lat również praca\n                                            naukowa opiera się na wykorzystaniu MATLABA. Prowadziłem również dla\n                                            studentów laboratoria z przedmiotu „Języki Modelowania i Symulacji”\n                                            które\n                                            skupiały się na wykorzystaniu MATLABA w modelowaniu i symulacji\n                                            rzeczywistych procesów.\n                                        "
                       )
                     ])
                   ])

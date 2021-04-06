@@ -17086,4 +17086,11 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+.header .top-menu ul li a.active *,
+.header .top-menu ul li a.active span,
+.header .top-menu ul li a.active .icon,
+.header .top-menu ul li a.active .link {
+  color: #78cc6d;
+}
+
 

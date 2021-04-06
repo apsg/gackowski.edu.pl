@@ -1355,8 +1355,6 @@ textarea.error::-webkit-input-placeholder {
   height: 570px;
   background: #FFF;
   transform-origin: center left;
-  opacity: 1;
-  visibility: visible;
   z-index: 8;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -2223,13 +2221,6 @@ textarea.error::-webkit-input-placeholder {
 /*
 	New Styles
 */
-/* Cards */
-.card-inner {
-  transition: visibility 1s linear, opacity 0s linear;
-  -moz-transition: visibility 1s linear, opacity 0s linear;
-  -webkit-transition: visibility 1s linear, opacity 0s linear;
-  -o-transition: visibility 1s linear, opacity 0s linear;
-}
 .content.works .filter-menu .f_btn input {
   cursor: pointer;
 }

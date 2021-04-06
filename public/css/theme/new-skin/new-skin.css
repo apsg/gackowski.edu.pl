@@ -216,8 +216,8 @@ strong {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 60px 0 0 0;
-		max-width: 400px;
+		padding: 10px 0 0 0;
+		max-width: 500px;
 	}
 	.container.opened {
 		margin-left: auto;
@@ -797,8 +797,8 @@ input[type="file"] {
 	overflow: hidden;
 	left: 560px;
 	right: 0;
-	top: 15px;
-	bottom: 15px;
+	top: 5px;
+	bottom: 5px;
 	width: auto;
 	height: auto;
 	border-radius: 0 4px 4px 0;
@@ -830,7 +830,7 @@ input[type="file"] {
 	}
 	.card-inner {
 		position: relative;
-		margin: 15px 0;
+		margin: 0 0;
 		left: 0;
 		top: 0;
 		width: auto;
@@ -2669,7 +2669,7 @@ a.next.page-numbers:hover {
 	}
 }
 
-@media (max-width: 680px) {
+@media (max-width: 559px) {
 	.container {
 	    padding-top: 118px;
 	}
