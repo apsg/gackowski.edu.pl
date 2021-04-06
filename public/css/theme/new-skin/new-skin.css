@@ -109,8 +109,8 @@ strong {
 	border-radius: 6px;
 }
 
-.card-inner .card-wrap, 
-.content-sidebar .sidebar-wrap, 
+.card-inner .card-wrap,
+.content-sidebar .sidebar-wrap,
 .profile .main-menu-fixed .main-menu {
 	height: 100%;
 	overflow: auto;
@@ -771,7 +771,7 @@ input[type="file"] {
 	color: #323232;
 }
 
-.card-started .profile .subtitle, 
+.card-started .profile .subtitle,
 .card-started .profile .typed-cursor {
 	position: relative;
 	margin: 0;
@@ -2161,7 +2161,7 @@ a.next.page-numbers:hover {
 	display: block;
 }
 
-.post-comments .post-comment .desc .comment-time, 
+.post-comments .post-comment .desc .comment-time,
 .post-comments .post-comment .desc .comment-date {
 	margin: 0 7px 0 0;
 	padding: 0;
@@ -2315,7 +2315,7 @@ a.next.page-numbers:hover {
 	margin-bottom: 10px;
 }
 
-.comments .title.comment-reply-title:before, 
+.comments .title.comment-reply-title:before,
 .comments .title.comment-reply-title:after {
 	display: none;
 }
@@ -2495,14 +2495,14 @@ a.next.page-numbers:hover {
 	-o-transition: all 0.3s ease 0s;
 }
 
-.profile .main-menu .menu-main-menu-container:hover ul li a, 
+.profile .main-menu .menu-main-menu-container:hover ul li a,
 .profile .main-menu .menu-main-menu-container:hover ul li a .icon {
 	color: #aaa;
 }
 
-.profile .main-menu ul li.current-menu-item a, 
-.profile .main-menu .menu-main-menu-container ul li a:hover, 
-.profile .main-menu ul li.current-menu-item a .icon, 
+.profile .main-menu ul li.current-menu-item a,
+.profile .main-menu .menu-main-menu-container ul li a:hover,
+.profile .main-menu ul li.current-menu-item a .icon,
 .profile .main-menu .menu-main-menu-container ul li a:hover .icon {
 	color: #323232;
 }
@@ -2585,7 +2585,7 @@ a.next.page-numbers:hover {
 	-o-transform: rotate(45deg);
 }
 
-.profile .main-menu ul li.current_page_item > a, 
+.profile .main-menu ul li.current_page_item > a,
 .profile .main-menu ul li:hover > a,
 .profile .main-menu ul li.current_page_parent > a,
 .profile .main-menu ul li.current_page_ancestor > a {
@@ -2593,13 +2593,13 @@ a.next.page-numbers:hover {
 	color: #78cc6d;
 }
 
-.profile .main-menu ul li.page_item_has_children.current_page_item > a:before, 
-.profile .main-menu ul li.page_item_has_children.current_page_item > a:after, 
-.profile .main-menu ul li.page_item_has_children:hover > a:before, 
+.profile .main-menu ul li.page_item_has_children.current_page_item > a:before,
+.profile .main-menu ul li.page_item_has_children.current_page_item > a:after,
+.profile .main-menu ul li.page_item_has_children:hover > a:before,
 .profile .main-menu ul li.page_item_has_children:hover > a:after,
-.profile .main-menu ul li.page_item_has_children.current_page_parent > a:before, 
+.profile .main-menu ul li.page_item_has_children.current_page_parent > a:before,
 .profile .main-menu ul li.page_item_has_children.current_page_parent > a:after,
-.profile .main-menu ul li.page_item_has_children.current_page_ancestor > a:before, 
+.profile .main-menu ul li.page_item_has_children.current_page_ancestor > a:before,
 .profile .main-menu ul li.page_item_has_children.current_page_ancestor > a:after {
 	background: #78cc6d;
 }

@@ -1355,8 +1355,8 @@ textarea.error::-webkit-input-placeholder {
   height: 570px;
   background: #FFF;
   transform-origin: center left;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   z-index: 8;
   border-radius: 4px;
   -moz-border-radius: 4px;

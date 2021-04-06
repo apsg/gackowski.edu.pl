@@ -130,39 +130,38 @@
             <!-- menu -->
             <div class="top-menu">
                 <ul>
-                    <li class="active">
-                        <a @if(Request::is('/')) href="#about-card" @else href="{{ url('/') }}" @endif>
+                    <li>
+                        <router-link to="/">
                             <span class="icon ion-person"></span>
                             <span class="link">About</span>
-                        </a>
+                        </router-link>
                     </li>
                     <li>
-                        <a @if(Request::is('/')) href="#resume-card" @else href="{{ url('/resume') }}" @endif>
+                        <router-link to="resume">
                             <span class="icon ion-android-list"></span>
                             <span class="link">Resume</span>
-                        </a>
+                        </router-link>
                     </li>
                     <li>
-                        <a @if(Request::is('/')) href="#works-card" @else href="{{ url('/works') }}" @endif>
+                        <router-link to="/works">
                             <span class="icon ion-paintbrush"></span>
                             <span class="link">Works</span>
-                        </a>
+                        </router-link>
                     </li>
                     <li>
-                        <a @if(Request::is('/')) href="#blog-card" @else href="{{ url('/blog') }}" @endif>
+                        <router-link to="/blog">
                             <span class="icon ion-chatbox-working"></span>
                             <span class="link">Blog</span>
-                        </a>
+                        </router-link>
                     </li>
                     <li>
-                        <a @if(Request::is('/')) href="#contact-card" @else href="{{ url('/contact') }}" @endif>
+                        <router-link to="/contact">
                             <span class="icon ion-at"></span>
                             <span class="link">Contact</span>
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
             </div>
-
         </header>
 
         <!--
@@ -225,11 +224,11 @@
             </div>
 
         </div>
-
-        @yield('content')
-
+        <div>
+            <router-view></router-view>
+            @yield('content')
+        </div>
     </div>
-
 </div>
 
 <!--

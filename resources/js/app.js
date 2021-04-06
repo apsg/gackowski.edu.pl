@@ -16,11 +16,18 @@ window.customElements.define('codersrank-skills-chart', CodersRankSkillsChart);
 window.Vue = require('vue').default;
 Vue.component('blog-list', require('./components/BlogList.vue').default);
 Vue.component('blog-post', require('./components/BlogPost.vue').default);
+Vue.component('nav-link', require('./components/NavLink.vue').default);
 
 import infiniteScroll from 'vue-infinite-scroll';
 Vue.use(infiniteScroll);
 
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+import {router} from './router';
+
 const app = new Vue({
+    router,
     el: '#app',
 });
 
