@@ -111,6 +111,10 @@
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-package-tools" />
       <path value="$PROJECT_DIR$/vendor/apsg/wordpressor" />
+      <path value="$PROJECT_DIR$/vendor/apsg/da-gallery-fetcher" />
+      <path value="$PROJECT_DIR$/vendor/kamermans/guzzle-oauth2-subscriber" />
+      <path value="$PROJECT_DIR$/vendor/sabre/xml" />
+      <path value="$PROJECT_DIR$/vendor/sabre/uri" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

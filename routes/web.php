@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ImagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::get('/blog/{slug}', [BlogController::class, 'show']);
 
 Route::get('/a/blog', [BlogController::class, 'index']);
 Route::get('/a/blog/{slug}', [BlogController::class, 'single']);
+
+Route::get('/a/images', [ImagesController::class, 'index']);
