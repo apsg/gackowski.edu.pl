@@ -5501,9 +5501,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "About"
+  name: "About",
+  data: function data() {
+    return {
+      quotes: [{
+        quote: 'The clearest way into the Universe is through a forest wilderness.',
+        author: 'John Muir'
+      }, {
+        quote: 'The more advanced science gets, the closer it is to art. The more advanced art gets, the closer it is to science.',
+        author: 'Buckminster Fuller'
+      }, {
+        quote: 'Każda wystarczająco zaawansowana technologia jest nieodróżnialna od magii.',
+        author: 'Arthur C. Clarke'
+      }]
+    };
+  }
 });
 
 /***/ }),
@@ -45510,14 +45523,14 @@ var staticRenderFns = [
               _c("div", { staticClass: "text" }, [
                 _c("div", [
                   _vm._v(
-                    "\n                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit\n                                    amet, consectetur adipiscing elit.\n                                "
+                    "\n                                    The clearest way into the Universe is through a forest wilderness.\n                                "
                   )
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "user" }, [
                 _c("div", { staticClass: "info" }, [
-                  _c("div", { staticClass: "name" }, [_vm._v("Ryan Adlard")])
+                  _c("div", { staticClass: "name" }, [_vm._v("John Muir")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "clear" })

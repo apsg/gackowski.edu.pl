@@ -190,13 +190,12 @@
                         <div class="revs-item">
                             <div class="text">
                                 <div>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
-                                    amet, consectetur adipiscing elit.
+                                    The clearest way into the Universe is through a forest wilderness.
                                 </div>
                             </div>
                             <div class="user">
                                 <div class="info">
-                                    <div class="name">Ryan Adlard</div>
+                                    <div class="name">John Muir</div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -211,7 +210,22 @@
 
 <script>
 export default {
-    name: "About"
+    name: "About",
+
+    data() {
+        return {
+            quotes: [{
+                quote: 'The clearest way into the Universe is through a forest wilderness.',
+                author: 'John Muir'
+            }, {
+                quote: 'The more advanced science gets, the closer it is to art. The more advanced art gets, the closer it is to science.',
+                author: 'Buckminster Fuller'
+            }, {
+                quote: 'Każda wystarczająco zaawansowana technologia jest nieodróżnialna od magii.',
+                author: 'Arthur C. Clarke'
+            }]
+        }
+    }
 }
 </script>
 
