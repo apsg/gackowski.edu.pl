@@ -20,10 +20,10 @@ jobs:
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SSH_PRIVATE_KEY: ${{ jobs.build.prod.KEY }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "/"
-          REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USER }}
-          TARGET: ${{ secrets.TARGET }}
+          REMOTE_HOST: ${{ jobs.build.prod.HOST }}
+          REMOTE_USER: ${{ jobs.build.prod.USER }}
+          TARGET: ${{ jobs.build.prod.TARGET }}
           EXCLUDE: "/vendor/, /node_modules/"
