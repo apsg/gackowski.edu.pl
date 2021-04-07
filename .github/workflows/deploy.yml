@@ -30,7 +30,7 @@ jobs:
       - name: Composer and migrations
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: cd ${{ secrets.TARGET }} && composer74 install
+          command: cd ${{ secrets.TARGET }} && composer install
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           privateKey: ${{ secrets.KEY }}
