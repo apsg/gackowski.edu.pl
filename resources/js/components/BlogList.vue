@@ -49,20 +49,13 @@
             </nav>
         </div>
 
-        <blog-popup ref="popup"></blog-popup>
-
     </div>
 </template>
 
 <script>
-import BlogPopup from "./BlogPopup";
 
 export default {
     name: "BlogList",
-
-    components: {
-        'blog-popup': BlogPopup
-    },
 
     data() {
         return {
@@ -105,7 +98,9 @@ export default {
         },
 
         openPopup(slug) {
-            this.$refs.popup.open(slug);
+            // this.$refs.popup.open(slug);
+            // this.$emit('blog', slug);
+            this.$store.dispatch('fetchBlog', slug);
         }
     }
 }

@@ -137,6 +137,8 @@
             @yield('content')
         </div>
     </div>
+
+    <modal ref="modal"></modal>
 </div>
 
 <script src="{{ @asset('/js/app.js') }}"></script>

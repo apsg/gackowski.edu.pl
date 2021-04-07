@@ -18,19 +18,24 @@ window.customElements.define('codersrank-skills-chart', CodersRankSkillsChart);
 window.Vue = require('vue').default;
 Vue.component('blog-list', require('./components/BlogList.vue').default);
 Vue.component('blog-post', require('./components/BlogPost.vue').default);
+Vue.component('modal', require('./components/Modal.vue').default);
 
 import infiniteScroll from 'vue-infinite-scroll';
+import Vuex from 'vuex';
+import VueRouter from 'vue-router';
 
 Vue.use(infiniteScroll);
-
-import VueRouter from 'vue-router'
-
 Vue.use(VueRouter);
+Vue.use(Vuex)
 
 import {router} from './router';
+import store from './store';
+
+const vuex = new Vuex.Store(store);
 
 const app = new Vue({
     router,
+    store: vuex,
     el: '#app',
     mounted() {
         let typed = new Typed('#typed', {
