@@ -38,8 +38,12 @@ jobs:
           node-version: '14.x'
       - name: Install npm dependencies
         run: npm install
-      - name: Run build task
+      - name: Build assets
         run: npm run production
+      - name: Clean directories
+        run: |
+          rm -Rf node_modules
+          rm -Rf vendor
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
