@@ -57,7 +57,7 @@ jobs:
       - name: Composer and migrations
         uses: JimCronqvist/action-ssh@master
         with:
-          hosts: pasterzd@s9.zenbox.pl
+          hosts: ${{ secrets.HOST }}
           privateKey: ${{ secrets.KEY }}
           command: |
             cd ${{ secrets.TARGET }}
