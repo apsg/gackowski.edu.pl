@@ -31,7 +31,6 @@ jobs:
         uses: JimCronqvist/action-ssh@master
         with:
           hosts: ${{ secrets.USER }}@${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
           privateKey: ${{ secrets.KEY }}
           command: |
             alias php='php74'
