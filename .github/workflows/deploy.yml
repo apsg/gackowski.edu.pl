@@ -57,4 +57,4 @@ jobs:
           privateKey: ${{ secrets.KEY }}
           command: |
             cd ${{ secrets.TARGET }}
-            composer install --ignore-platform-reqs
+            composer install
