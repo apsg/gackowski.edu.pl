@@ -1999,9 +1999,6 @@ textarea.error::-webkit-input-placeholder {
   margin: 0 0 20px 0;
   height: 190px;
 }
-.alert-success {
-  display: none;
-}
 .alert-success p {
   margin: 0;
   font-size: 17px;

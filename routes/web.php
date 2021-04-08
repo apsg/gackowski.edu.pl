@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/contact', [ContactController::class, 'send']);
 
 Route::get('/{section}', function ($section) {
     return view('welcome')->with(compact('section'));

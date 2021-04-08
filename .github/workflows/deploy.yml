@@ -1,6 +1,6 @@
 name: Test and deploy
 
-on: [push]
+on: [ push ]
 
 jobs:
   laravel-tests:
@@ -27,7 +27,7 @@ jobs:
         run: vendor/bin/phpunit
 
   build:
-    needs: [laravel-tests]
+    needs: [ laravel-tests ]
     runs-on: ubuntu-latest
 
     steps:
@@ -54,6 +54,34 @@ jobs:
           REMOTE_USER: ${{ secrets.USER }}
           TARGET: ${{ secrets.TARGET }}
           EXCLUDE: "/node_modules/"
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_APP_NAME=gacek
+          envkey_APP_ENV=production
+          envkey_APP_KEY=base64:xt2G6AYqwEQIOS5P8T6waIGU8bJq9xcvl98v+JZuCrg=
+          envkey_APP_DEBUG=true
+          envkey_APP_URL=https://gackowski.edu.pl
+          envkey_LOG_CHANNEL=stack
+          envkey_BROADCAST_DRIVER=log
+          envkey_CACHE_DRIVER=file
+          envkey_QUEUE_CONNECTION=sync
+          envkey_SESSION_DRIVER=file
+          envkey_SESSION_LIFETIME=120
+          envkey_MAIL_MAILER=smtp
+          envkey_MAIL_HOST=smtp.mailtrap.io
+          envkey_MAIL_PORT=2525
+          envkey_MAIL_USERNAME=null
+          envkey_MAIL_PASSWORD=null
+          envkey_MAIL_ENCRYPTION=null
+          envkey_MAIL_FROM_ADDRESS=null
+          envkey_MAIL_FROM_NAME="${APP_NAME}"
+          envkey_WORDPRESS_URL=https://blog.gackowski.edu.pl
+          envkey_DA_USERNAME=gacek
+          envkey_DA_CLIENT_ID=15247
+          envkey_DA_SECRET=2d9cc65251e07ad4d70d6c61ad138ae6
+          file_name: .env
+
       - name: Composer and migrations
         uses: JimCronqvist/action-ssh@master
         with:
