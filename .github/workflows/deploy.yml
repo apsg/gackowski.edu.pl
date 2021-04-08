@@ -26,11 +26,14 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USER }}
           TARGET: ${{ secrets.TARGET }}
-          EXCLUDE: "node_modules/"
+          EXCLUDE: "/node_modules/"
       - name: Composer and migrations
-        uses: garygrossgarten/github-action-ssh@release
+        uses: JimCronqvist/action-ssh@master
         with:
-          command: cd ${{ secrets.TARGET }} && composer73 install
-          host: ${{ secrets.HOST }}
+          hosts: ${{ secrets.USER }}@${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           privateKey: ${{ secrets.KEY }}
+          command: |
+            alias php='php74'
+            cd ${{ secrets.TARGET }}
+            composer74 install
