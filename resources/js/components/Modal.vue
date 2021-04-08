@@ -15,7 +15,7 @@ export default {
 
     data() {
         return {
-            shouldShowToggle: true,
+            shouldShowToggle: false,
         }
     },
 
@@ -26,12 +26,11 @@ export default {
         },
 
         open(html) {
-            this.content = html;
+            this.$store.commit('popup', html);
             this.shouldShowToggle = true;
         },
 
         blog(slug) {
-            console.log(slug);
             this.open('<p>Loading...</p>');
             this.blogService.grab(slug)
                 .then(data => {
@@ -46,7 +45,9 @@ export default {
 
     computed: {
         shouldShow() {
-            return this.$store.state.popupContent;
+            return this.$store.state.loading
+                || this.shouldShowToggle
+                || this.$store.state.popupContent;
         },
 
         content() {

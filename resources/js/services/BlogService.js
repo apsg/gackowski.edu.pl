@@ -12,8 +12,8 @@ export default class BlogService {
     <div class="image h-100 w-100">
         <img class="w-100" src="${data.featured}" alt="">
     </div>
-    <div class="desc">
-        <div class="post-box">
+    <div class="desc container">
+        <div class="post-box ">
             <h1>${data.title}</h1>
             <div class="blog-detail">
                 <span class="date">${data.date}</span>

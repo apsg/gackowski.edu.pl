@@ -5108,8 +5108,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       this.getPage(this.page);
     },
     openPopup: function openPopup(slug) {
-      // this.$refs.popup.open(slug);
-      // this.$emit('blog', slug);
       this.$store.dispatch('fetchBlog', slug);
     }
   }
@@ -5128,37 +5126,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -5243,7 +5210,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "Modal",
   data: function data() {
     return {
-      shouldShowToggle: true
+      shouldShowToggle: false
     };
   },
   methods: {
@@ -5258,7 +5225,6 @@ __webpack_require__.r(__webpack_exports__);
     blog: function blog(slug) {
       var _this = this;
 
-      console.log(slug);
       this.open('<p>Loading...</p>');
       this.blogService.grab(slug).then(function (data) {
         _this.open(data);
@@ -5270,7 +5236,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     shouldShow: function shouldShow() {
-      return this.$store.state.popupContent;
+      return this.$store.state.loading || this.shouldShowToggle || this.$store.state.popupContent;
     },
     content: function content() {
       return this.$store.state.popupContent;
@@ -6224,7 +6190,7 @@ var BlogService = /*#__PURE__*/function () {
   }, {
     key: "format",
     value: function format(data) {
-      return "\n<div class=\"content\">\n    <div class=\"image h-100 w-100\">\n        <img class=\"w-100\" src=\"".concat(data.featured, "\" alt=\"\">\n    </div>\n    <div class=\"desc\">\n        <div class=\"post-box\">\n            <h1>").concat(data.title, "</h1>\n            <div class=\"blog-detail\">\n                <span class=\"date\">").concat(data.date, "</span>\n            </div>\n            <div class=\"blog-content px-3\">\n                ").concat(data.content, "\n            </div>\n        </div>\n    </div>\n</div>");
+      return "\n<div class=\"content\">\n    <div class=\"image h-100 w-100\">\n        <img class=\"w-100\" src=\"".concat(data.featured, "\" alt=\"\">\n    </div>\n    <div class=\"desc container\">\n        <div class=\"post-box \">\n            <h1>").concat(data.title, "</h1>\n            <div class=\"blog-detail\">\n                <span class=\"date\">").concat(data.date, "</span>\n            </div>\n            <div class=\"blog-content px-3\">\n                ").concat(data.content, "\n            </div>\n        </div>\n    </div>\n</div>");
     }
   }]);
 
@@ -6268,7 +6234,6 @@ var store = {
       return new Promise(function (resolve, reject) {
         var blogService = new _services_BlogService__WEBPACK_IMPORTED_MODULE_0__.default();
         blogService.grab(slug).then(function (r) {
-          console.log(r);
           commit('popup', r);
           resolve();
         });
@@ -45005,9 +44970,9 @@ var render = function() {
             },
             [
               _vm._v(
-                "\n                        " +
+                "\n                    " +
                   _vm._s(_vm.content) +
-                  "\n                    "
+                  "\n                "
               )
             ]
           )

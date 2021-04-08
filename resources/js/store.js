@@ -23,7 +23,6 @@ const store = {
 
                 blogService.grab(slug)
                     .then(r => {
-                        console.log(r);
                         commit('popup', r);
                         resolve()
                     });

@@ -98,8 +98,6 @@ export default {
         },
 
         openPopup(slug) {
-            // this.$refs.popup.open(slug);
-            // this.$emit('blog', slug);
             this.$store.dispatch('fetchBlog', slug);
         }
     }
