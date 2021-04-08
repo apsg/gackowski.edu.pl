@@ -179,7 +179,11 @@
                     </div>
 
                     <div class="col col-12 border-line-v">
-                        <codersrank-skills-chart username="apsg"></codersrank-skills-chart>
+                        <codersrank-skills-chart
+                            username="apsg"
+                            legend="true"
+                            labels="true"
+                        ></codersrank-skills-chart>
                     </div>
 
                     <div class="clear"></div>

@@ -5219,7 +5219,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.commit('popup', null);
     },
     open: function open(html) {
-      this.content = html;
+      this.$store.commit('popup', html);
       this.shouldShowToggle = true;
     },
     blog: function blog(slug) {
@@ -5634,6 +5634,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
 //
 //
 //
@@ -45802,7 +45806,11 @@ var render = function() {
             _c(
               "div",
               { staticClass: "col col-12 border-line-v" },
-              [_c("codersrank-skills-chart", { attrs: { username: "apsg" } })],
+              [
+                _c("codersrank-skills-chart", {
+                  attrs: { username: "apsg", legend: "true", labels: "true" }
+                })
+              ],
               1
             ),
             _vm._v(" "),
