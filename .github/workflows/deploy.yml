@@ -49,7 +49,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USER }}
           TARGET: ${{ secrets.TARGET }}
-          EXCLUDE: "/node_modules/, /.idea/, /.git/, /vendor/"
+          EXCLUDE: "/node_modules/, /.idea/, /.git/, /vendor/, /.github/"
       - name: Creating .env file should go here
         run: echo "Creating env file..."
       - name: Composer and migrations

@@ -3,8 +3,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\PostResource;
 use Apsg\Wordpressor\Wordpressor;
-use Apsg\Wordpressor\WordpressorFacade;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class BlogController extends Controller
 {
@@ -32,5 +32,10 @@ class BlogController extends Controller
             ->getTransformed()[0];
 
         return new PostResource($post);
+    }
+
+    public function redirect(string $slug)
+    {
+        return redirect('/blog/' . $slug, 301);
     }
 }
