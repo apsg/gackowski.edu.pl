@@ -13,7 +13,7 @@ export default class BlogService {
         <img class="w-100" src="${data.featured}" alt="">
     </div>
     <div class="desc container">
-        <div class="post-box ">
+        <div class="post-box pb-5">
             <h1>${data.title}</h1>
             <div class="blog-detail">
                 <span class="date">${data.date}</span>
