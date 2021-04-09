@@ -31,7 +31,15 @@
         Favicons
     -->
     <link rel="shortcut icon" href="/images/favicons/favicon.ico">
-
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/72x72.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/120x120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/180x180.png">
+    <link rel="icon" type="image/png" href="/images/favicons/32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/favicons/96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicons/16x16.png" sizes="16x16">
 </head>
 
 <body>
