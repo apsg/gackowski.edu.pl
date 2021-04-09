@@ -3,7 +3,15 @@ import BlogService from "./services/BlogService";
 const store = {
     state: {
         loading: false,
-        popupContent: null
+        popupContent: []
+    },
+    getters: {
+        current: state => {
+            if (state.popupContent.length === 0)
+                return null;
+
+            return state.popupContent[state.popupContent.length - 1];
+        }
     },
     mutations: {
         loading(state, value) {
@@ -11,7 +19,11 @@ const store = {
         },
 
         popup(state, content) {
-            state.popupContent = content;
+            state.popupContent.push(content);
+        },
+
+        popupClose(state) {
+            state.popupContent.pop();
         }
     },
     actions: {
@@ -24,6 +36,7 @@ const store = {
                 blogService.grab(slug)
                     .then(r => {
                         commit('popup', r);
+                        commit('loading', false);
                         resolve()
                     });
             })

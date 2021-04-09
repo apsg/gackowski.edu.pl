@@ -4,7 +4,7 @@
             <a href="#" class="btn btn-secondary hide-preview" @click="close">
                 <i class="fa fa-times"></i>
             </a>
-            <div class="modal-content bg-white" v-html="content">{{ content }}</div>
+            <div class="modal-content bg-white" v-html="content" @click="onClick">{{ content }}</div>
         </div>
     </div>
 </template>
@@ -20,10 +20,10 @@ export default {
     },
 
     methods: {
-        close() {
-            this.shouldShowToggle = false;
-            this.$store.commit('popup', null);
-            this.$store.commit('loading', false);
+        close(e) {
+            e.stopPropagation();
+            console.log('close');
+            this.$store.commit('popupClose');
         },
 
         open(html) {
@@ -42,6 +42,21 @@ export default {
 
         noClose(e) {
             e.stopPropagation();
+        },
+
+        onClick(e) {
+            if (e.target.className.includes('wp-image')) {
+                this.openSingleImage(e.target.parentNode.href);
+            }
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            console.log(e.target.parentNode.href, e.target.className);
+        },
+
+        openSingleImage(href) {
+            this.$store.commit('popup', `<img src="${href}" class="w-100" />`);
         }
     },
 
@@ -49,11 +64,11 @@ export default {
         shouldShow() {
             return this.$store.state.loading
                 || this.shouldShowToggle
-                || this.$store.state.popupContent;
+                || this.$store.getters.current;
         },
 
         content() {
-            return this.$store.state.popupContent;
+            return this.$store.getters.current;
         }
     }
 }

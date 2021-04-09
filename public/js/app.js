@@ -5214,10 +5214,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    close: function close() {
-      this.shouldShowToggle = false;
-      this.$store.commit('popup', null);
-      this.$store.commit('loading', false);
+    close: function close(e) {
+      e.stopPropagation();
+      console.log('close');
+      this.$store.commit('popupClose');
     },
     open: function open(html) {
       this.$store.commit('popup', html);
@@ -5235,14 +5235,26 @@ __webpack_require__.r(__webpack_exports__);
     },
     noClose: function noClose(e) {
       e.stopPropagation();
+    },
+    onClick: function onClick(e) {
+      if (e.target.className.includes('wp-image')) {
+        this.openSingleImage(e.target.parentNode.href);
+      }
+
+      e.preventDefault();
+      e.stopPropagation();
+      console.log(e.target.parentNode.href, e.target.className);
+    },
+    openSingleImage: function openSingleImage(href) {
+      this.$store.commit('popup', "<img src=\"".concat(href, "\" class=\"w-100\" />"));
     }
   },
   computed: {
     shouldShow: function shouldShow() {
-      return this.$store.state.loading || this.shouldShowToggle || this.$store.state.popupContent;
+      return this.$store.state.loading || this.shouldShowToggle || this.$store.getters.current;
     },
     content: function content() {
-      return this.$store.state.popupContent;
+      return this.$store.getters.current;
     }
   }
 });
@@ -6244,14 +6256,23 @@ __webpack_require__.r(__webpack_exports__);
 var store = {
   state: {
     loading: false,
-    popupContent: null
+    popupContent: []
+  },
+  getters: {
+    current: function current(state) {
+      if (state.popupContent.length === 0) return null;
+      return state.popupContent[state.popupContent.length - 1];
+    }
   },
   mutations: {
     loading: function loading(state, value) {
       state.loading = value;
     },
     popup: function popup(state, content) {
-      state.popupContent = content;
+      state.popupContent.push(content);
+    },
+    popupClose: function popupClose(state) {
+      state.popupContent.pop();
     }
   },
   actions: {
@@ -6262,6 +6283,7 @@ var store = {
         var blogService = new _services_BlogService__WEBPACK_IMPORTED_MODULE_0__.default();
         blogService.grab(slug).then(function (r) {
           commit('popup', r);
+          commit('loading', false);
           resolve();
         });
       });
@@ -45073,7 +45095,8 @@ var render = function() {
               "div",
               {
                 staticClass: "modal-content bg-white",
-                domProps: { innerHTML: _vm._s(_vm.content) }
+                domProps: { innerHTML: _vm._s(_vm.content) },
+                on: { click: _vm.onClick }
               },
               [_vm._v(_vm._s(_vm.content))]
             )
