@@ -26,7 +26,7 @@
         <a target="_blank" href="https://profile.codersrank.io/user/apsg">
             <img src="/images/codersrank.png"/>
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/szymon-gackowski-3a65a51a5/">
+        <a target="_blank" href="https://www.linkedin.com/in/szymon-gackowski/">
             <span class="fab fa-linkedin"></span>
         </a>
         <a target="_blank" href="https://www.deviantart.com/gacek">
