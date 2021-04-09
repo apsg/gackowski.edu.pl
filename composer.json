@@ -8,6 +8,7 @@
         "php": "^7.3|^8.0",
         "apsg/da-gallery-fetcher": "9999999-dev",
         "apsg/wordpressor": "9999999-dev",
+        "apsg/zenboxer": "^1.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",

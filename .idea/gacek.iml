@@ -120,6 +120,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/kamermans/guzzle-oauth2-subscriber" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sabre/xml" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sabre/uri" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/apsg/zenboxer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
