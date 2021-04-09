@@ -32,6 +32,9 @@
         <a target="_blank" href="https://www.deviantart.com/gacek">
             <span class="fab fa-deviantart"></span>
         </a>
+        <a target="_blank" href="https://www.last.fm/user/koshaueck">
+            <span class="fab fa-lastfm"></span>
+        </a>
     </div>
 
     <!-- profile buttons -->

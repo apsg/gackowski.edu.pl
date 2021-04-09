@@ -54,6 +54,8 @@ jobs:
           REMOTE_USER: ${{ secrets.USER }}
           TARGET: ${{ secrets.TARGET }}
           EXCLUDE: "/node_modules/"
+      - name: Creating .env file should go here
+        run: echo "Creating env file..."
       - name: Composer and migrations
         uses: JimCronqvist/action-ssh@master
         with:
