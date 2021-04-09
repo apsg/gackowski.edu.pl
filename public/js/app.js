@@ -5217,6 +5217,7 @@ __webpack_require__.r(__webpack_exports__);
     close: function close() {
       this.shouldShowToggle = false;
       this.$store.commit('popup', null);
+      this.$store.commit('loading', false);
     },
     open: function open(html) {
       this.$store.commit('popup', html);
@@ -5228,6 +5229,8 @@ __webpack_require__.r(__webpack_exports__);
       this.open('<p>Loading...</p>');
       this.blogService.grab(slug).then(function (data) {
         _this.open(data);
+
+        _this.$store.commit('loading', false);
       });
     },
     noClose: function noClose(e) {
@@ -6214,7 +6217,7 @@ var BlogService = /*#__PURE__*/function () {
   }, {
     key: "format",
     value: function format(data) {
-      return "\n<div class=\"content\">\n    <div class=\"image h-100 w-100\">\n        <img class=\"w-100\" src=\"".concat(data.featured, "\" alt=\"\">\n    </div>\n    <div class=\"desc container\">\n        <div class=\"post-box \">\n            <h1>").concat(data.title, "</h1>\n            <div class=\"blog-detail\">\n                <span class=\"date\">").concat(data.date, "</span>\n            </div>\n            <div class=\"blog-content px-3\">\n                ").concat(data.content, "\n            </div>\n        </div>\n    </div>\n</div>");
+      return "\n<div class=\"content\">\n    <div class=\"image h-100 w-100\">\n        <img class=\"w-100\" src=\"".concat(data.featured, "\" alt=\"\">\n    </div>\n    <div class=\"desc container\">\n        <div class=\"post-box pb-5\">\n            <h1>").concat(data.title, "</h1>\n            <div class=\"blog-detail\">\n                <span class=\"date\">").concat(data.date, "</span>\n            </div>\n            <div class=\"blog-content px-3\">\n                ").concat(data.content, "\n            </div>\n        </div>\n    </div>\n</div>");
     }
   }]);
 

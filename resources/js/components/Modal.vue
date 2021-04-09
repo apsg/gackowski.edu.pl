@@ -23,6 +23,7 @@ export default {
         close() {
             this.shouldShowToggle = false;
             this.$store.commit('popup', null);
+            this.$store.commit('loading', false);
         },
 
         open(html) {
@@ -35,6 +36,7 @@ export default {
             this.blogService.grab(slug)
                 .then(data => {
                     this.open(data);
+                    this.$store.commit('loading', false);
                 })
         },
 
