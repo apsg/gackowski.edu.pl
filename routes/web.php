@@ -27,7 +27,7 @@ Route::get('/{section}', function ($section) {
 });
 
 // Wordpress legacy route
-Route::get('/blog/{year}/{month}/{day}/{slug}', [BlogController::class, 'redirect']);
+Route::permanentRedirect('/blog/{year}/{month}/{day}/{slug}', '/blog/{slug}');
 Route::get('/blog/{slug}', [BlogController::class, 'show']);
 
 Route::get('/a/blog', [BlogController::class, 'index']);
