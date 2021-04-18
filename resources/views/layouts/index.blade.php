@@ -111,7 +111,10 @@ _)      \.___.,|     .'
             <!-- menu btn -->
             <div class="p-1 text-center d-none d-md-block bg-white rounded mb-2">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('images/logo_400.png') }}" width="60" height="60"/>
+                    <img src="{{ asset('images/logo_400.png') }}"
+                         width="60"
+                         height="60"
+                         alt="Logo - back home"/>
                 </a>
             </div>
 
